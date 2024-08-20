@@ -61,7 +61,7 @@ const Navbar = () => {
         <div
           onClick={handleClose}
         >
-          <Link href="#top">
+          <Link href="#home">
             <Image
               src={Logo}
               alt="sculpted audio logo light"

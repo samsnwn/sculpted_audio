@@ -25,7 +25,7 @@ const Header = () => {
       className="flex justify-between sticky top-0 text-white shadow-xl w-full"
       id="top"
     > */}
-      <Link href="#top">
+      <Link href="#home">
         <Image src={Logo} alt="Sculpted Audio Logo" width={125} height={125} />
         {/* {isScrolled ? <Image src={LogoDark} alt="Sculpted Audio Logo" width={150} height={150} /> : <Image src={Logo} alt="Sculpted Audio Logo" width={150} height={150} />} */}
       </Link>

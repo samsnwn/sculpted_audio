@@ -29,10 +29,10 @@ const Hero = () => {
           </h2>
         </div>
       </article>
-      <article className="mt-10 rotate-45 -z-50 md:hidden">
+      <article className="mt-10 rotate-45 -z-50 md:hidden opacity-0.8">
         <Image src={Rock} alt="Rock" width={70} className="mx-auto" />
       </article>
-      <article className="mt-10 rotate-45 -z-50 hidden md:flex">
+      <article className="mt-10 rotate-45 -z-50 hidden md:flex opacity-0.5">
         <Image src={Rock} alt="Rock" width={125} className="mx-auto" />
         {/* <div className="flex relaative">
           <div className="border border-red w-1 bg-red rotate-45 fixed h-5"></div>
