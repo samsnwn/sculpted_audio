@@ -7,6 +7,9 @@ import { prGrotesk, gtPressura, gtPressuraMono } from "./styles/fonts";
 export const metadata: Metadata = {
   title: "Sculpted Audio",
   description: "Sculpted Audio",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
