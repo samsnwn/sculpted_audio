@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav
       className={cn("flex items-center font-light", gtPressuraMono.className)}
     >
-      <ul className="hidden md:flex gap-5 justify-between items-center h-full md:pr-3">
+      <ul className="hidden md:flex gap-14 justify-between items-center h-full md:pr-3">
         <Link href="#services">
           <li className="border-b border-transparent hover:border-red transition duration-300">
             Services
