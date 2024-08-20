@@ -21,7 +21,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={cn("flex items-center font-light", gtPressuraMono.className)}>
+    <nav
+      className={cn("flex items-center font-light", gtPressuraMono.className)}
+    >
       <ul className="hidden md:flex gap-5 justify-between items-center h-full md:pr-3">
         <Link href="#services">
           <li className="border-b border-transparent hover:border-red transition duration-300">
@@ -52,21 +54,23 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <div
-        className={`flex flex-col fixed h-screen pt-24 ease-in duration-300 top-0 w-[65%] items-center text-center shadow shadow-red rounded-md ${
+        className={`flex flex-col fixed h-screen ease-in duration-300 top-0 w-[65%] items-center justify-center gap-72 text-center shadow shadow-red rounded-md ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        <div className="pb-44 flex flex-col items-center gap-10 px-5" onClick={handleClose}>
-          <Link href="#top" >
-          <Image
-            src={Logo}
-            alt="sculpted audio logo light"
-            width={150}
-            height={150}
-          />
+        <div
+          onClick={handleClose}
+        >
+          <Link href="#top">
+            <Image
+              src={Logo}
+              alt="sculpted audio logo light"
+              width={150}
+              height={150}
+            />
           </Link>
         </div>
-        <ul className="flex flex-col items-center w-full h-full gap-5 text-white text-lg font-light">
+        <ul className="flex flex-col items-center w-full gap-5 text-white text-lg font-light">
           <Link href="#services">
             <li
               className="border-b border-transparent hover:border-red transition duration-300"
@@ -105,14 +109,14 @@ const Navbar = () => {
           <ImInstagram />
           </Link>
         </div> */}
-        <div className="pb-44 flex flex-col items-center gap-10 px-5">
+        <div className="flex flex-col items-center gap-10 px-5">
           <Image
             src={Icon}
             alt="sculpted audio icon light"
             width={25}
             height={25}
           />
-          <h3 className="text-sm">
+          <h3 className="text-xs">
             Sculpted Audio© {currentYear}. All rights reserved.
           </h3>
         </div>
