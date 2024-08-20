@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 const HamburgerMenu = ({
   menuOpen,
@@ -12,7 +12,7 @@ const HamburgerMenu = ({
   };
 
   return (
-    <div className="relative pr-1" >
+    <div className="relative pr-1">
       <button
         onClick={toggleMenu}
         className="flex flex-col h-6 w-8 justify-between items-center group"

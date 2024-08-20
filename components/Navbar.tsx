@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ImInstagram } from "react-icons/im";
 import Icon from "@/public/icons/1-RGB/Light/SculptedAudio-Icon-Light-RGB.png";
 import Logo from "@/public/logos/1-RGB/Light/SculptedAudio-Logo-Light-RGB.png";
 import HamburgerMenu from "./Hamburger";
@@ -58,9 +57,7 @@ const Navbar = () => {
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        <div
-          onClick={handleClose}
-        >
+        <div onClick={handleClose}>
           <Link href="#home">
             <Image
               src={Logo}
@@ -104,11 +101,6 @@ const Navbar = () => {
             </li>
           </Link>
         </ul>
-        {/* <div>
-          <Link href="https://www.instagram.com" className="text-white">
-          <ImInstagram />
-          </Link>
-        </div> */}
         <div className="flex flex-col items-center gap-5 px-6">
           <Image
             src={Icon}

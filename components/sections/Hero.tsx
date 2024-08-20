@@ -1,4 +1,4 @@
-import { gtPressura, gtPressuraMono } from "@/app/styles/fonts";
+import { gtPressuraMono } from "@/app/styles/fonts";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import Rock from "../../public/images/Rocks//Quartz-2.png";
@@ -14,7 +14,6 @@ const Hero = () => {
             WE BELIEVE IN THE ART OF SONIC SCULPTING
           </h1>
         </div>
-      {/* <button className="text-white text-xl rounded-lg p-2 shadow-sm shadow-red">Meet us!</button> */}
         <div className="sm:max-w-[350px] xs:max-w-[350px] md:max-w-[400px] md:ml-6 mx-auto">
           <h2
             className={cn(
@@ -37,10 +36,6 @@ const Hero = () => {
       </article>
       <article className="mt-10 rotate-45 -z-50 hidden md:flex opacity-0.5">
         <Image src={Rock} alt="Rock" width={125} className="mx-auto" />
-        {/* <div className="flex relaative">
-          <div className="border border-red w-1 bg-red rotate-45 fixed h-5"></div>
-          <div className="border border-red w-1 bg-red rotate-45 fixed h-5"></div>
-        </div> */}
       </article>
     </section>
   );
