@@ -73,7 +73,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-1 p-2 uppercase pb-16"
+        className="space-y-1 p-2 uppercase pb-10"
       >
         <FormField
           control={form.control}

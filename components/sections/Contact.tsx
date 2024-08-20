@@ -4,7 +4,7 @@ import Rock from "@/public/images/Rocks/Rock-7.png";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col w-full h-screen pt-20 bg-white" id="contact">
+    <div className="flex flex-col w-full h-full py-20 bg-white" id="contact">
       <div className="h-2/3 flex">
         <div className="flex flex-col justify-center h-2/3 p-2">
           <div className="w-5 h-0.5 bg-red border border-red" />
