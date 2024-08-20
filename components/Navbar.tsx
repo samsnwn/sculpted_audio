@@ -3,11 +3,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { ImInstagram } from "react-icons/im";
 import Icon from "@/public/icons/1-RGB/Light/SculptedAudio-Icon-Light-RGB.png";
-import IconDark from "@/public/icons/1-RGB/Dark/SculptedAudio-Icon-Dark-RGB.png";
+import Logo from "@/public/logos/1-RGB/Light/SculptedAudio-Logo-Light-RGB.png";
 import HamburgerMenu from "./Hamburger";
 import { gtPressuraMono } from "@/app/styles/fonts";
 import { cn } from "@/utils/cn";
-
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,50 +21,83 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={cn("flex items-center", gtPressuraMono.className)}>
+    <nav className={cn("flex items-center font-light", gtPressuraMono.className)}>
       <ul className="hidden md:flex gap-5 justify-between items-center h-full md:pr-3">
         <Link href="#services">
-          <li className="border-b border-transparent hover:border-red transition duration-300">Services</li>
+          <li className="border-b border-transparent hover:border-red transition duration-300">
+            Services
+          </li>
         </Link>
         <Link href="#portfolio">
-          <li className="border-b border-transparent hover:border-red transition duration-300">Clients</li>
+          <li className="border-b border-transparent hover:border-red transition duration-300">
+            Clients
+          </li>
         </Link>
         <Link href="#about">
-          <li className="border-b border-transparent hover:border-red transition duration-300">About</li>
+          <li className="border-b border-transparent hover:border-red transition duration-300">
+            About
+          </li>
         </Link>
         <Link href="#contact">
-          <li className="border-b border-transparent hover:border-red transition duration-300">Contact</li>
+          <li className="border-b border-transparent hover:border-red transition duration-300">
+            Contact
+          </li>
         </Link>
       </ul>
 
       {/* Hamburger */}
       <div onClick={handleNav} className="md:hidden cursor-pointer">
-        <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
-  
-      
 
       {/* Hamburger Menu */}
       <div
-        className={`flex flex-col fixed h-screen pt-24 ease-in duration-300 top-0 w-[65%] items-center text-center ${
+        className={`flex flex-col fixed h-screen pt-24 ease-in duration-300 top-0 w-[65%] items-center text-center shadow shadow-red rounded-md ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        <ul className="flex flex-col items-center w-full h-full gap-5 text-white text-lg">
-          <Link href="#top">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Home</li>
+        <div className="pb-44 flex flex-col items-center gap-10 px-5" onClick={handleClose}>
+          <Link href="#top" >
+          <Image
+            src={Logo}
+            alt="sculpted audio logo light"
+            width={150}
+            height={150}
+          />
           </Link>
+        </div>
+        <ul className="flex flex-col items-center w-full h-full gap-5 text-white text-lg font-light">
           <Link href="#services">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Services</li>
+            <li
+              className="border-b border-transparent hover:border-red transition duration-300"
+              onClick={handleClose}
+            >
+              Services
+            </li>
           </Link>
           <Link href="#portfolio">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Clients</li>
+            <li
+              className="border-b border-transparent hover:border-red transition duration-300"
+              onClick={handleClose}
+            >
+              Clients
+            </li>
           </Link>
           <Link href="#about">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>About</li>
+            <li
+              className="border-b border-transparent hover:border-red transition duration-300"
+              onClick={handleClose}
+            >
+              About
+            </li>
           </Link>
           <Link href="#contact">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Contact</li>
+            <li
+              className="border-b border-transparent hover:border-red transition duration-300"
+              onClick={handleClose}
+            >
+              Contact
+            </li>
           </Link>
         </ul>
         {/* <div>
@@ -73,9 +105,16 @@ const Navbar = () => {
           <ImInstagram />
           </Link>
         </div> */}
-        <div className="pb-44 flex flex-col items-center gap-10">
-          <Image src={Icon} alt="sculpted audio icon light" width={50} height={50}/>
-          <h3>Sculpted Audio© {currentYear}. All rights reserved.</h3>
+        <div className="pb-44 flex flex-col items-center gap-10 px-5">
+          <Image
+            src={Icon}
+            alt="sculpted audio icon light"
+            width={25}
+            height={25}
+          />
+          <h3 className="text-sm">
+            Sculpted Audio© {currentYear}. All rights reserved.
+          </h3>
         </div>
       </div>
     </nav>
