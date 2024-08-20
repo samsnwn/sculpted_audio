@@ -46,11 +46,11 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <div
-        className={`flex flex-col fixed h-screen p-20 ease-in duration-500 top-0 w-[65%] items-center ${
+        className={`flex flex-col fixed h-screen p-20 ease-in duration-500 top-0 w-[65%] items-center text-center ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        <ul className={cn("flex flex-col items-center w-full h-full gap-5 text-white text-lg text-", gtPressuraMono.className)}>
+        <ul className={cn("flex flex-col items-center w-full h-full gap-5 text-white text-lg", gtPressuraMono.className)}>
           <Link href="#top">
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Home</li>
           </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Clients</li>
           </Link>
           <Link href="#about">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>About Us</li>
+            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>About</li>
           </Link>
           <Link href="#contact">
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Contact</li>
