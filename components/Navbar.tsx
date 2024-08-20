@@ -5,6 +5,8 @@ import { ImInstagram } from "react-icons/im";
 import Icon from "@/public/icons/1-RGB/Light/SculptedAudio-Icon-Light-RGB.png";
 import IconDark from "@/public/icons/1-RGB/Dark/SculptedAudio-Icon-Dark-RGB.png";
 import HamburgerMenu from "./Hamburger";
+import { gtPressuraMono } from "@/app/styles/fonts";
+import { cn } from "@/utils/cn";
 
 
 const Navbar = () => {
@@ -25,10 +27,10 @@ const Navbar = () => {
           <li className="border-b border-transparent hover:border-red transition duration-300">Services</li>
         </Link>
         <Link href="#portfolio">
-          <li className="border-b border-transparent hover:border-red transition duration-300">Portfolio/Clients</li>
+          <li className="border-b border-transparent hover:border-red transition duration-300">Clients</li>
         </Link>
         <Link href="#about">
-          <li className="border-b border-transparent hover:border-red transition duration-300">About Us/Team</li>
+          <li className="border-b border-transparent hover:border-red transition duration-300">About</li>
         </Link>
         <Link href="#contact">
           <li className="border-b border-transparent hover:border-red transition duration-300">Contact</li>
@@ -44,11 +46,11 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <div
-        className={`fixed h-screen p-20 ease-in duration-500 top-0 w-[65%] ${
+        className={`flex flex-col fixed h-screen p-20 ease-in duration-500 top-0 w-[65%] items-center ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        <ul className="flex flex-col items-center w-full h-full gap-5 text-white-100 text-lg">
+        <ul className={cn("flex flex-col items-center w-full h-full gap-5 text-white text-lg text-", gtPressuraMono.className)}>
           <Link href="#top">
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Home</li>
           </Link>
@@ -56,10 +58,10 @@ const Navbar = () => {
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Services</li>
           </Link>
           <Link href="#portfolio">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Portfolio/Clients</li>
+            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Clients</li>
           </Link>
           <Link href="#about">
-            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>About Us/Team</li>
+            <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>About Us</li>
           </Link>
           <Link href="#contact">
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Contact</li>
@@ -71,8 +73,7 @@ const Navbar = () => {
           </Link>
         </div> */}
         <div>
-          {/* <Image src={Icon} alt="sculpted audio icon light" width={50} height={50}/> */}
-          {/* <Image src={IconDark} alt="sculpted audio icon dark" width={500} height={500}/> */}
+          <Image src={Icon} alt="sculpted audio icon light" width={50} height={50}/>
         </div>
       </div>
     </nav>
