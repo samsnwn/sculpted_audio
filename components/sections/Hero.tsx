@@ -14,6 +14,7 @@ const Hero = () => {
             WE BELIEVE IN THE ART OF SONIC SCULPTING
           </h1>
         </div>
+      {/* <button className="text-white text-xl rounded-lg p-2 shadow-sm shadow-red">Meet us!</button> */}
         <div className="md:max-w-[400px] md:ml-6">
           <h2
             className={cn(
@@ -28,9 +29,15 @@ const Hero = () => {
           </h2>
         </div>
       </article>
-      {/* <button className="text-white text-4xl border border-red rounded-xl p-2 shadow-sm shadow-red">Meet us!</button> */}
-      <article className="mt-10 rotate-45 -z-50">
-        <Image src={Rock} alt="Rock" width={135} className="mx-auto" />
+      <article className="mt-10 rotate-45 -z-50 md:hidden">
+        <Image src={Rock} alt="Rock" width={70} className="mx-auto" />
+      </article>
+      <article className="mt-10 rotate-45 -z-50 hidden md:flex">
+        <Image src={Rock} alt="Rock" width={125} className="mx-auto" />
+        {/* <div className="flex relaative">
+          <div className="border border-red w-1 bg-red rotate-45 fixed h-5"></div>
+          <div className="border border-red w-1 bg-red rotate-45 fixed h-5"></div>
+        </div> */}
       </article>
     </section>
   );

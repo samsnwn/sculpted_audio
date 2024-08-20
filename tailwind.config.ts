@@ -25,8 +25,8 @@ const config = {
     extend: {
       scrollbar: {
         DEFAULT: {
-          'width': '12px',
-          'height': '12px',
+          'width': '5px',
+          'height': '5px',
           'thumb-color': '#888',
           'track-color': '#f1f1f1',
           'hover-thumb-color': '#555',
