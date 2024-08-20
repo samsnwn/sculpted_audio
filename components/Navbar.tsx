@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <div
-        className={`flex flex-col fixed h-screen ease-in duration-300 top-0 w-[65%] items-center justify-center gap-40 text-center shadow shadow-red rounded-md ${
+        className={`flex flex-col fixed h-screen ease-in duration-300 top-0 w-[65%] items-center justify-center gap-32 text-center rounded-md ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
