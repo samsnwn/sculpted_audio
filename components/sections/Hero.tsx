@@ -27,7 +27,7 @@ const Hero = () => {
         </h2>
       </article>
       {/* <button className="text-white text-4xl border border-red rounded-xl p-2 shadow-sm shadow-red">Meet us!</button> */}
-      <article>
+      <article className="mt-10">
         <Image src={Rock} alt="Rock" width={150} className="mx-auto" />
       </article>
     </section>
