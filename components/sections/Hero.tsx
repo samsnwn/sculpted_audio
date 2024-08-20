@@ -6,17 +6,17 @@ import Rock from "../../public/images/Rocks/Rock-1-.png";
 const Hero = () => {
   return (
     <section className="flex flex-col md:flex-row items-center h-screen md:h-[90vh] justify-between md:justify-start">
-      <article className="flex flex-col md:w-1/2 gap-10 sm:p-5">
+      <article className="flex flex-col md:w-1/2 gap-20 xs:p-10">
         <div className="flex flex-col justify-between max-w-[300px] mx-auto">
           <div className="w-5 h-0.5 bg-red border border-red" />
           <div className="w-0.5 bg-red h-4 border border-red" />
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl md:items-start text-center md:text-start md:ml-5">
+          <h1 className="text-white text-5xl md:text-6xl lg:text-7xl md:items-start text-center md:text-start md:ml-5">
             WE BELIEVE IN THE ART OF SONIC SCULPTING
           </h1>
         </div>
         <h2
           className={cn(
-            "text-white text-xs sm:text-sm text-center sm:test-start max-w-[800px]",
+            "text-white text-sm sm:text-md text-center sm:test-start max-w-[500px]",
             gtPressuraMono.className
           )}
         >
