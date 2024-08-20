@@ -23,6 +23,15 @@ const config = {
       padding: "2rem",
     },
     extend: {
+      scrollbar: {
+        DEFAULT: {
+          'width': '12px',
+          'height': '12px',
+          'thumb-color': '#888',
+          'track-color': '#f1f1f1',
+          'hover-thumb-color': '#555',
+        },
+      },
       screens: {
         "2xs": "320px",
         "xs": "480px",
@@ -178,6 +187,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
+    require('tailwind-scrollbar'),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
