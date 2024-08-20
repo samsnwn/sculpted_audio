@@ -46,7 +46,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <div
-        className={`flex flex-col fixed h-screen p-20 ease-in duration-500 top-0 w-[65%] items-center text-center ${
+        className={`flex flex-col fixed h-screen pt-24 ease-in duration-500 top-0 w-[65%] items-center text-center ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
@@ -72,7 +72,7 @@ const Navbar = () => {
           <ImInstagram />
           </Link>
         </div> */}
-        <div>
+        <div className="pb-28">
           <Image src={Icon} alt="sculpted audio icon light" width={50} height={50}/>
         </div>
       </div>
