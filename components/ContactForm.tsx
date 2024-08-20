@@ -55,7 +55,7 @@ const ContactForm = () => {
       name: "",
       email: "",
       phone: {
-        countryCode: "+49",
+        countryCode: "",
         number: "",
       },
       services: "artist",
@@ -74,7 +74,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-1 p-2 uppercase"
+        className="space-y-1 p-2 uppercase flex-grow"
       >
         <FormField
           control={form.control}
