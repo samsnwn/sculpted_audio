@@ -1,39 +1,41 @@
-// components/HamburgerMenu.js
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
-const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const HamburgerMenu = ({
+  menuOpen,
+  setMenuOpen,
+}: {
+  menuOpen: boolean;
+  setMenuOpen: Dispatch<SetStateAction<boolean>>;
+}) => {
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <div className="relative">
       <button
         onClick={toggleMenu}
-        className="flex flex-col h-7 w-8 justify-between items-center group"
+        className="flex flex-col h-6 w-8 justify-between items-center group"
       >
         {/* Top bun */}
         <span
           className={`h-1 w-full rounded-lg transition-transform duration-300 ease-in-out bg-white ${
-            isOpen ? "rotate-45 translate-y-3" : ""
+            menuOpen ? "rotate-45 translate-y-3" : ""
           }`}
         />
         {/* Meat */}
         <span
           className={`h-1 w-full rounded-lg transition-opacity duration-300 ease-in-out bg-white ${
-            isOpen ? "opacity-0" : ""
+            menuOpen ? "opacity-0" : ""
           }`}
         />
         {/* Bottom bun */}
         <span
           className={`h-1 w-full rounded-lg transition-transform duration-300 ease-in-out bg-white ${
-            isOpen ? "-rotate-45 -translate-y-3" : ""
+            menuOpen ? "-rotate-45 -translate-y-3" : ""
           }`}
         />
       </button>
-     
     </div>
   );
 };

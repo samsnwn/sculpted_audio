@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { ImInstagram } from "react-icons/im";
 import Icon from "@/public/icons/1-RGB/Light/SculptedAudio-Icon-Light-RGB.png";
 import IconDark from "@/public/icons/1-RGB/Dark/SculptedAudio-Icon-Dark-RGB.png";
@@ -38,20 +37,18 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleNav} className="md:hidden cursor-pointer">
-        <HamburgerMenu/>
+        <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       </div>
+  
       
 
       {/* Hamburger Menu */}
       <div
-        className={`fixed h-screen p-3 ease-in duration-500 top-0 w-[65%] ${
+        className={`fixed h-screen p-20 ease-in duration-500 top-0 w-[65%] ${
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        {/* <div onClick={handleClose} className="flex cursor-pointer justify-end">
-          <AiOutlineClose size={40} />
-        </div>{" "} */}
-        <ul className="flex flex-col items-center w-full h-full gap-5 text-white-100 text-sm">
+        <ul className="flex flex-col items-center w-full h-full gap-5 text-white-100 text-lg">
           <Link href="#top">
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Home</li>
           </Link>
