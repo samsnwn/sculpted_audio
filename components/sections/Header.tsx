@@ -25,7 +25,7 @@ const Header = () => {
       }`}
     >
       <Link href="#home">
-        <Image src={Logo} alt="Sculpted Audio Logo" width={125} height={125} />
+        <Image src={Logo} alt="Sculpted Audio Logo" width={125} height={125} priority className="w-auto h-auto"/>
       </Link>
       <Navbar />
     </header>

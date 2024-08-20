@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "bg-black lg:mx-auto w-full max-w-[1880px]",
@@ -38,7 +38,7 @@ export default function RootLayout({
         id="home"
       >
         <Header />
-        <main className="flex flex-col p-2 md:p-4 h-full">{children}</main>
+        <main className="flex flex-col h-full overflow-hidden">{children}</main>
       </body>
     </html>
   );

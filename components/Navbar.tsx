@@ -62,8 +62,9 @@ const Navbar = () => {
             <Image
               src={Logo}
               alt="sculpted audio logo light"
-              width={150}
-              height={150}
+              width={125}
+              height={125}
+              className="w-auto h-auto"
             />
           </Link>
         </div>
