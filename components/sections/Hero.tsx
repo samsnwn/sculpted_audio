@@ -5,7 +5,7 @@ import Rock from "../../public/images/Rocks/Rock-1-.png";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center h-screen md:h-[90vh] justify-between md:justify-start">
+    <section className="flex flex-col md:flex-row items-center h-full justify-between md:justify-start">
       <article className="flex flex-col md:w-1/2 gap-20 xs:p-10">
         <div className="flex flex-col justify-between max-w-[300px] mx-auto">
           <div className="w-5 h-0.5 bg-red border border-red" />
