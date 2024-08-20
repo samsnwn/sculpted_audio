@@ -15,7 +15,7 @@ const Hero = () => {
           </h1>
         </div>
       {/* <button className="text-white text-xl rounded-lg p-2 shadow-sm shadow-red">Meet us!</button> */}
-        <div className="md:max-w-[400px] md:ml-6">
+        <div className="sm:max-w-[350px] xs:max-w-[350px] md:max-w-[400px] md:ml-6 mx-auto">
           <h2
             className={cn(
               "text-white text-sm sm:text-md text-center md:text-start",
@@ -29,8 +29,11 @@ const Hero = () => {
           </h2>
         </div>
       </article>
-      <article className="mt-10 rotate-45 -z-50 md:hidden opacity-0.8">
+      <article className="mt-10 rotate-45 -z-50 sm:hidden opacity-0.5">
         <Image src={Rock} alt="Rock" width={70} className="mx-auto" />
+      </article>
+      <article className="mt-10 rotate-45 -z-50 hidden sm:flex md:hidden opacity-0.5">
+        <Image src={Rock} alt="Rock" width={100} className="mx-auto" />
       </article>
       <article className="mt-10 rotate-45 -z-50 hidden md:flex opacity-0.5">
         <Image src={Rock} alt="Rock" width={125} className="mx-auto" />
