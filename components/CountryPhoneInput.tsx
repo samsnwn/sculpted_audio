@@ -1,7 +1,20 @@
 import { useState } from "react";
-import { Input } from "@/components/ui/input"; // Adjust according to your imports
+import { Input } from "@/components/ui/input";
+import { FieldValues, UseControllerProps } from 'react-hook-form';
 
-const CountryPhoneInput = ({ field }: any) => {
+interface PhoneField {
+  countryCode?: string;
+  number?: string;
+}
+
+interface CountryPhoneInputProps<T extends FieldValues> {
+  field: UseControllerProps<T> & {
+    value?: PhoneField;
+    onChange: (value: PhoneField) => void;
+  };
+}
+
+const CountryPhoneInput = <T extends FieldValues>({ field }: CountryPhoneInputProps<T>) => {
   const [countryCode, setCountryCode] = useState(field.value?.countryCode);
 
   return (

@@ -16,7 +16,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "./ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import CountryPhoneInput from "@/components/CountryPhoneInput";
 
@@ -30,8 +29,8 @@ const formSchema = z.object({
     countryCode: z
       .string()
       .min(1, "Country code is required")
-      .max(4, "Phone number can't exceed 15 digits")
-      .regex(/^[0-9]+$/, "Phone number must contain only digits"),
+      .max(5, "Code can't exceed 5 digits")
+      .regex(/^[0-9]+$/, "Code must contain only digits"),
     number: z
       .string()
       .min(10, "Phone number must be at least 10 digits")
@@ -74,7 +73,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-1 p-2 uppercase flex-grow"
+        className="space-y-1 p-2 uppercase pb-16"
       >
         <FormField
           control={form.control}
