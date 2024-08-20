@@ -11,6 +11,7 @@ import { cn } from "@/utils/cn";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
@@ -21,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center">
+    <nav className={cn("flex items-center", gtPressuraMono.className)}>
       <ul className="hidden md:flex gap-5 justify-between items-center h-full md:pr-3">
         <Link href="#services">
           <li className="border-b border-transparent hover:border-red transition duration-300">Services</li>
@@ -50,7 +51,7 @@ const Navbar = () => {
           menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
         }`}
       >
-        <ul className={cn("flex flex-col items-center w-full h-full gap-5 text-white text-lg", gtPressuraMono.className)}>
+        <ul className="flex flex-col items-center w-full h-full gap-5 text-white text-lg">
           <Link href="#top">
             <li className="border-b border-transparent hover:border-red transition duration-300" onClick={handleClose}>Home</li>
           </Link>
@@ -72,8 +73,9 @@ const Navbar = () => {
           <ImInstagram />
           </Link>
         </div> */}
-        <div className="pb-44">
+        <div className="pb-44 flex flex-col items-center gap-10">
           <Image src={Icon} alt="sculpted audio icon light" width={50} height={50}/>
+          <h3>Sculpted Audio© {currentYear}. All rights reserved.</h3>
         </div>
       </div>
     </nav>
