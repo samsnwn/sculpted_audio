@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col items-center gap-5 justify-center w-full p-10">
-      <Image src={Icon} alt="icon" width={100} height={100}/>
+      <Image src={Icon} alt="icon" width={75} height={75}/>
       <p className="text-white"> Sculpted Audio© {currentYear}. All rights reserved.</p>
     </footer>
   )
