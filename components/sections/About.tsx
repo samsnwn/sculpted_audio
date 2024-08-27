@@ -26,7 +26,7 @@ const sections = [
 const About = () => {
   return (
     <section
-      className="flex flex-col h-screen py-10 bg-black w-full px-2 gap-5"
+      className="flex flex-col h-full py-10 bg-black w-full px-2 gap-5"
       id="about"
     >
       {sections.map((section) => (
