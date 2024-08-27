@@ -9,12 +9,12 @@ const Contact = () => {
         <div className="flex flex-col justify-center h-2/3 p-2">
           <div className="w-5 h-0.5 bg-red border border-red" />
           <div className="w-0.5 bg-red h-4 border border-red" />
-          <h3 className="text-5xl md:text-5xl lg:text-6xl ml-5 md:items-start">
+          <h2 className="text-5xl md:text-5xl lg:text-6xl ml-5 md:items-start">
             Online Quotation
-          </h3>
-          <h4 className="text-red ml-7">
+          </h2>
+          <h3 className="text-red ml-7">
             Contact us to help you develop your project
-          </h4>
+          </h3>
         </div>
         <div className="-rotate-45 translate-x-32">
           <Image src={Rock} alt="Rock" width={150} height={150}/>

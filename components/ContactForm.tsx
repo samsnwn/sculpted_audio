@@ -33,7 +33,7 @@ const formSchema = z.object({
       .regex(/^[0-9]+$/, "Code must contain only digits"),
     number: z
       .string()
-      .min(10, "Phone number must be at least 10 digits")
+      .min(8, "Phone number must be at least 8 digits")
       .max(15, "Phone number can't exceed 15 digits")
       .regex(/^[0-9]+$/, "Phone number must contain only digits"),
   }),
@@ -44,7 +44,6 @@ const formSchema = z.object({
   message: z
     .string()
     .min(1, "Message is required")
-    .max(500, "Message can't exceed 500 characters"),
 });
 
 const ContactForm = () => {
