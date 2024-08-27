@@ -20,16 +20,16 @@ const CountryPhoneInput = <T extends FieldValues>({ field }: CountryPhoneInputPr
   return (
     <div className="flex space-x-2">
       <Input
-        placeholder="+49"
+        placeholder="49"
         value={countryCode}
         onChange={(e) => {
           setCountryCode(e.target.value);
           field.onChange({ ...field.value, countryCode: e.target.value });
         }}
-        className="flex-grow w-1/6"
+        className="flex-grow w-1/5"
       />
       <Input
-        placeholder="14212345678"
+        placeholder="1234567890"
         value={field.value?.number}
         onChange={(e) => field.onChange({ ...field.value, number: e.target.value })}
         className="flex-grow"

@@ -7,6 +7,25 @@ import HamburgerMenu from "./Hamburger";
 import { gtPressuraMono } from "@/app/styles/fonts";
 import { cn } from "@/utils/cn";
 
+const links = [
+  {
+    title: "Services",
+    slug: "#services",
+  },
+  {
+    title: "Portfolio",
+    slug: "#portfolio",
+  },
+  {
+    title: "About",
+    slug: "#about",
+  },
+  {
+    title: "Contact",
+    slug: "#contact",
+  },
+];
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const currentYear = new Date().getFullYear();
@@ -24,26 +43,13 @@ const Navbar = () => {
       className={cn("flex items-center font-light", gtPressuraMono.className)}
     >
       <ul className="hidden md:flex gap-14 justify-between items-center h-full md:pr-3">
-        <Link href="#services">
-          <li className="border-b border-transparent hover:border-red transition duration-300">
-            Services
-          </li>
-        </Link>
-        <Link href="#portfolio">
-          <li className="border-b border-transparent hover:border-red transition duration-300">
-            Clients
-          </li>
-        </Link>
-        <Link href="#about">
-          <li className="border-b border-transparent hover:border-red transition duration-300">
-            About
-          </li>
-        </Link>
-        <Link href="#contact">
-          <li className="border-b border-transparent hover:border-red transition duration-300">
-            Contact
-          </li>
-        </Link>
+        {links.map((link) => (
+          <Link href={link.slug} key={link.title}>
+            <li className="border-b border-transparent hover:border-red transition duration-300">
+              {link.title}
+            </li>
+          </Link>
+        ))}
       </ul>
 
       {/* Hamburger */}
@@ -69,38 +75,16 @@ const Navbar = () => {
           </Link>
         </div>
         <ul className="flex flex-col items-center w-full gap-5 text-white text-lg font-light">
-          <Link href="#services">
-            <li
-              className="border-b border-transparent hover:border-red transition duration-300"
-              onClick={handleClose}
-            >
-              Services
-            </li>
-          </Link>
-          <Link href="#portfolio">
-            <li
-              className="border-b border-transparent hover:border-red transition duration-300"
-              onClick={handleClose}
-            >
-              Clients
-            </li>
-          </Link>
-          <Link href="#about">
-            <li
-              className="border-b border-transparent hover:border-red transition duration-300"
-              onClick={handleClose}
-            >
-              About
-            </li>
-          </Link>
-          <Link href="#contact">
-            <li
-              className="border-b border-transparent hover:border-red transition duration-300"
-              onClick={handleClose}
-            >
-              Contact
-            </li>
-          </Link>
+          {links.map((link) => (
+            <Link href={link.slug}>
+              <li
+                className="border-b border-transparent hover:border-red transition duration-300"
+                onClick={handleClose}
+              >
+                {link.title}
+              </li>
+            </Link>
+          ))}
         </ul>
         <div className="flex flex-col items-center gap-5 px-6">
           <Image

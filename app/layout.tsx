@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/sections/Header";
 import { cn } from "@/utils/cn";
 import { gtPressura } from "./styles/fonts";
+import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Sculpted Audio",
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex flex-col h-full overflow-hidden">{children}</main>
+        <Footer/>
       </body>
     </html>
   );

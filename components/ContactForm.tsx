@@ -73,14 +73,16 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-1 p-2 uppercase pb-10"
+        className="space-y-1 uppercase pb-10"
       >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem id="name">
-              <FormLabel htmlFor="name">Name</FormLabel>
+              <FormLabel htmlFor="name" className="p-1">
+                Name
+              </FormLabel>
               <FormControl>
                 <Input placeholder="Axel Smith" {...field} />
               </FormControl>
@@ -93,7 +95,9 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem id="email">
-              <FormLabel htmlFor="email">Email</FormLabel>
+              <FormLabel htmlFor="email" className="p-1">
+                Email
+              </FormLabel>
               <FormControl>
                 <Input placeholder="a.smith@gmail.com" {...field} />
               </FormControl>
@@ -106,7 +110,9 @@ const ContactForm = () => {
           name="phone"
           render={({ field }) => (
             <FormItem id="phone">
-              <FormLabel htmlFor="phone">Phone</FormLabel>
+              <FormLabel htmlFor="phone" className="p-1">
+                Phone
+              </FormLabel>
               <FormControl>
                 <CountryPhoneInput field={field} />
               </FormControl>
@@ -119,13 +125,15 @@ const ContactForm = () => {
           name="services"
           render={({ field }) => (
             <FormItem id="services">
-              <FormLabel htmlFor="services">Our Services</FormLabel>
+              <FormLabel htmlFor="services" className="p-1">
+                Our Services
+              </FormLabel>
               <RadioGroup
                 value={field.value}
                 onValueChange={field.onChange}
-                className="flex space-x-2"
+                className="flex space-x-2 items-center w-full"
               >
-                <div className="flex items-center">
+                <div className="flex items-center pl-2">
                   <RadioGroupItem
                     value="artist"
                     id="artist"
@@ -133,11 +141,7 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="artist"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 ${
-                      field.value === "artist"
-                        ? "bg-black text-white"
-                        : "bg-gray-200 border-gray-300 text-gray-700"
-                    }`}
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${field.value === "artist" ? "bg-black text-white" : "bg-gray-200 border-gray-300 text-gray-700"}`}
                   >
                     Artist
                   </label>
@@ -147,11 +151,7 @@ const ContactForm = () => {
                   <RadioGroupItem value="label" id="label" className="hidden" />
                   <label
                     htmlFor="label"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 ${
-                      field.value === "label"
-                        ? "bg-black text-white"
-                        : "bg-gray-200 border-gray-300 text-gray-700"
-                    }`}
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${field.value === "label" ? "bg-black text-white" : "bg-gray-200 border-gray-300 text-gray-700"}`}
                   >
                     Label
                   </label>
@@ -165,12 +165,7 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="gaming"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300
-        ${
-          field.value === "gaming"
-            ? "bg-black text-white"
-            : "bg-gray-200 border-gray-300 text-gray-700"
-        }`}
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${field.value === "gaming" ? "bg-black text-white": "bg-gray-200 border-gray-300 text-gray-700"}`}
                   >
                     Gaming
                   </label>
@@ -185,7 +180,9 @@ const ContactForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem id="message">
-              <FormLabel htmlFor="message">Message</FormLabel>
+              <FormLabel htmlFor="message" className="p-1">
+                Message
+              </FormLabel>
               <FormControl>
                 <Textarea placeholder="Your message..." {...field} />
               </FormControl>
@@ -193,7 +190,7 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="ml-2">Submit</Button>
       </form>
     </Form>
   );
