@@ -26,24 +26,14 @@ const formSchema = z.object({
     .max(100, "Name can't exceed 100 characters"),
   email: z.string().email("Invalid email address"),
   phone: z.object({
-    countryCode: z
-      .string()
-      .min(1, "Country code is required")
-      .max(5, "Code can't exceed 5 digits")
-      .regex(/^[0-9]+$/, "Code must contain only digits"),
-    number: z
-      .string()
-      .min(8, "Phone number must be at least 8 digits")
-      .max(15, "Phone number can't exceed 15 digits")
-      .regex(/^[0-9]+$/, "Phone number must contain only digits"),
+    countryCode: z.string(),
+    number: z.string(),
   }),
   services: z.enum(["artist", "label", "gaming"], {
     required_error: "Please select a service",
     invalid_type_error: "Invalid service selected",
   }),
-  message: z
-    .string()
-    .min(1, "Message is required")
+  message: z.string().min(1, "Message is required"),
 });
 
 const ContactForm = () => {
@@ -140,7 +130,11 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="artist"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${field.value === "artist" ? "bg-black text-white" : "bg-gray-200 border-gray-300 text-gray-700"}`}
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
+                      field.value === "artist"
+                        ? "bg-black text-white"
+                        : "bg-gray-200 border-gray-300 text-gray-700"
+                    }`}
                   >
                     Artist
                   </label>
@@ -150,7 +144,11 @@ const ContactForm = () => {
                   <RadioGroupItem value="label" id="label" className="hidden" />
                   <label
                     htmlFor="label"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${field.value === "label" ? "bg-black text-white" : "bg-gray-200 border-gray-300 text-gray-700"}`}
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
+                      field.value === "label"
+                        ? "bg-black text-white"
+                        : "bg-gray-200 border-gray-300 text-gray-700"
+                    }`}
                   >
                     Label
                   </label>
@@ -164,7 +162,11 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="gaming"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${field.value === "gaming" ? "bg-black text-white": "bg-gray-200 border-gray-300 text-gray-700"}`}
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
+                      field.value === "gaming"
+                        ? "bg-black text-white"
+                        : "bg-gray-200 border-gray-300 text-gray-700"
+                    }`}
                   >
                     Gaming
                   </label>
@@ -189,7 +191,9 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="ml-2">Submit</Button>
+        <Button type="submit" className="ml-2">
+          Submit
+        </Button>
       </form>
     </Form>
   );

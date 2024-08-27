@@ -1,6 +1,12 @@
-import React from "react";
+import { motion } from "framer-motion";
+import AboutArticle from "../AboutArticle";
 
-const sections = [
+export type Article = {
+  title: string;
+  desc: string;
+};
+
+const articles = [
   {
     title: "Our essence",
     desc: "CRAFTING THE PERFECTION OF SOUND IN ITS PUREST FORM. WITH PRECISION AND ELEGANCE, CREATING SONIC EXPERIENCES THAT ELEVATE EVERY NOTE AND RHYTHM. COMMITTED TO EXCELLENCE, SCULPTING EACH PROJECT WITH METICULOUS AND TRANSPARENT FOCUS, REDEFINING THE STANDARDS OF QUALITY IN SOUND ENGINEERING.",
@@ -26,24 +32,19 @@ const sections = [
 const About = () => {
   return (
     <section
-      className="flex flex-col h-full py-10 bg-black w-full px-2"
+      className="flex flex-col h-full md:h-screen py-20 bg-black w-full px-2"
       id="about"
     >
       <div className="w-5 h-0.5 bg-red border border-red" />
       <div className="w-0.5 bg-red h-4 border border-red" />
-      <h2 className="text-white text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start">
+      <h2 className="text-white text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-10">
         About
       </h2>
-      {sections.map((section) => (
-        <article key={section.title}>
-          <div className="w-3 h-0.5 bg-red border border-red" />
-          <div className="w-0.5 bg-red h-2 border border-red" />
-          <h3 className="text-red text-m ml-3 md:items-start">
-            {section.title}
-          </h3>
-          <p className="text-white text-m">{section.desc}</p>
-        </article>
-      ))}
+      <div className="flex flex-col space-y-10">
+        {articles.map((article, index) => (
+          <AboutArticle key={index} article={article} index={index}/>
+        ))}
+      </div>
     </section>
   );
 };

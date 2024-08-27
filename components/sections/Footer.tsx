@@ -2,9 +2,12 @@ import Image from "next/image";
 import Icon from "../../public/icons/1-RGB/Light/SculptedAudio-Icon-Light-RGB.png";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="flex justify-center w-full p-10">
+    <footer className="flex flex-col items-center gap-5 justify-center w-full p-10">
       <Image src={Icon} alt="icon" width={100} height={100}/>
+      <p className="text-white"> Sculpted Audio© {currentYear}. All rights reserved.</p>
     </footer>
   )
 }
