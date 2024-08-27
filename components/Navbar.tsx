@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-col items-center w-full gap-5 text-white text-lg font-light">
           {links.map((link) => (
-            <Link href={link.slug}>
+            <Link href={link.slug} key={link.title}>
               <li
                 className="border-b border-transparent hover:border-red transition duration-300"
                 onClick={handleClose}
