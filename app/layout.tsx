@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./styles/globals.css";
 import Header from "@/app/sections/Header";
 import { cn } from "@/utils/cn";
 import { gtPressura } from "./styles/fonts";
