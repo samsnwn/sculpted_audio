@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ContactForm from "../ContactForm";
+import ContactForm from "../../components/ContactForm";
 import Rock from "@/public/images/Rocks/Rock-7.png";
 
 const Contact = () => {

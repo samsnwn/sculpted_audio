@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/sections/Header";
+import Header from "@/app/sections/Header";
 import { cn } from "@/utils/cn";
 import { gtPressura } from "./styles/fonts";
-import Footer from "@/components/sections/Footer";
+import Footer from "@/app/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Sculpted Audio",

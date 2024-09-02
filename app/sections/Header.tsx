@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "../Navbar";
+import Navbar from "../../components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/logos/1-RGB/Light/SculptedAudio-Logo-Light-RGB.png";

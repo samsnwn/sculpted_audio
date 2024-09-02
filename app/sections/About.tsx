@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import AboutArticle from "../AboutArticle";
+import AboutArticle from "../../components/AboutArticle";
 
 const articles = [
   {
