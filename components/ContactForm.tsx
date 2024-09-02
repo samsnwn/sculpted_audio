@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -24,14 +24,17 @@ const formSchema = z.object({
   name: z
     .string()
     .min(1, "Name is required")
-    .max(100, "Name can't exceed 100 characters"),
-  email: z.string().email("Invalid email address"),
+    .max(25, "Name can't exceed 25 characters"),
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .max(50, "Exceeded maximum length")
+    .email("Invalid email address"),
   phone: z.object({
     countryCode: z.string(),
     number: z.string(),
   }),
   services: z.enum(["artist", "label", "gaming"], {
-    required_error: "Please select a service",
     invalid_type_error: "Invalid service selected",
   }),
   message: z.string().min(1, "Message is required"),
@@ -51,7 +54,6 @@ const ContactForm = () => {
       message: "",
     },
   });
-
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     // try {
@@ -77,7 +79,7 @@ const ContactForm = () => {
     //   alert('Failed to send your message. Please try again later.');
     //   console.error('EmailJS Error:', error);
     // }
-    console.log(values)
+    console.log(values);
   }
 
   return (
@@ -92,12 +94,12 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem id="name">
               <FormLabel htmlFor="name" className="p-1">
-                Name
+                Name*
               </FormLabel>
               <FormControl>
                 <Input placeholder="Axel Smith" {...field} />
               </FormControl>
-              <FormMessage className="px-1"/>
+              <FormMessage className="px-1" />
             </FormItem>
           )}
         />
@@ -107,12 +109,12 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem id="email">
               <FormLabel htmlFor="email" className="p-1">
-                Email
+                Email*
               </FormLabel>
               <FormControl>
                 <Input placeholder="a.smith@gmail.com" {...field} />
               </FormControl>
-              <FormMessage className="px-1"/>
+              <FormMessage className="px-1" />
             </FormItem>
           )}
         />
@@ -127,7 +129,7 @@ const ContactForm = () => {
               <FormControl>
                 <CountryPhoneInput field={field} />
               </FormControl>
-              <FormMessage className="px-1"/>
+              <FormMessage className="px-1" />
             </FormItem>
           )}
         />
@@ -194,7 +196,7 @@ const ContactForm = () => {
                   </label>
                 </div>
               </RadioGroup>
-              <FormMessage className="px-1"/>
+              <FormMessage className="px-1" />
             </FormItem>
           )}
         />
@@ -204,12 +206,12 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem id="message">
               <FormLabel htmlFor="message" className="p-1">
-                Message
+                Message*
               </FormLabel>
               <FormControl>
                 <Textarea placeholder="Your message..." {...field} />
               </FormControl>
-              <FormMessage className="px-1"/>
+              <FormMessage className="px-1" />
             </FormItem>
           )}
         />

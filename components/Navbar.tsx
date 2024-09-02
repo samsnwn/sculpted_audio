@@ -17,6 +17,10 @@ const links = [
     slug: "#portfolio",
   },
   {
+    title: "Clients",
+    slug: "#clients",
+  },
+  {
     title: "About",
     slug: "#about",
   },
