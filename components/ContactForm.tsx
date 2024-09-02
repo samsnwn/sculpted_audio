@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import emailjs from 'emailjs-com';
 
 import { Button } from "@/components/ui/button";
 import {
@@ -51,11 +52,32 @@ const ContactForm = () => {
     },
   });
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    // try {
+    //   const result = await emailjs.send(
+    //     'service_5wd7vmg',
+    //     'template_507vavf',
+    //     {
+    //       from_name: values.name,
+    //       from_email: values.email,
+    //       countryCode: values.phone.countryCode,
+    //       number: values.phone.number,
+    //       services: values.services,
+    //       message: values.message,
+    //     },
+    //     'qSKRPDQhJ7EsR6rtf'
+    //   );
+
+    //   if (result.status === 200) {
+    //     alert('Your message has been sent successfully!');
+    //     form.reset();
+    //   }
+    // } catch (error) {
+    //   alert('Failed to send your message. Please try again later.');
+    //   console.error('EmailJS Error:', error);
+    // }
+    console.log(values)
   }
 
   return (
@@ -75,7 +97,7 @@ const ContactForm = () => {
               <FormControl>
                 <Input placeholder="Axel Smith" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="px-1"/>
             </FormItem>
           )}
         />
@@ -90,7 +112,7 @@ const ContactForm = () => {
               <FormControl>
                 <Input placeholder="a.smith@gmail.com" {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="px-1"/>
             </FormItem>
           )}
         />
@@ -105,7 +127,7 @@ const ContactForm = () => {
               <FormControl>
                 <CountryPhoneInput field={field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="px-1"/>
             </FormItem>
           )}
         />
@@ -172,7 +194,7 @@ const ContactForm = () => {
                   </label>
                 </div>
               </RadioGroup>
-              <FormMessage />
+              <FormMessage className="px-1"/>
             </FormItem>
           )}
         />
@@ -187,7 +209,7 @@ const ContactForm = () => {
               <FormControl>
                 <Textarea placeholder="Your message..." {...field} />
               </FormControl>
-              <FormMessage />
+              <FormMessage className="px-1"/>
             </FormItem>
           )}
         />

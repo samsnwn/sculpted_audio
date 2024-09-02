@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import AboutArticle from "../AboutArticle";
 
-export type Article = {
-  title: string;
-  desc: string;
-};
-
 const articles = [
   {
     title: "Our essence",

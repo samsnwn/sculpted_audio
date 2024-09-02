@@ -1,9 +1,13 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Article } from "./sections/About";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+type Article = {
+  title: string;
+  desc: string;
+};
 
 type ArticleProps = {
   article: Article;
@@ -36,10 +40,10 @@ const AboutArticle: React.FC<ArticleProps> = ({ article, index }) => {
       key={index}
       ref={ref}
       initial={{ 
-        x: index % 2 === 0 ? -100 : 30,
+        x: index % 2 === 0 ? -30 : 10,
         opacity: 0,
         y: 15,    // Subtle vertical movement
-        scale: 0.95, // Slight scaling for a modern touch
+        scale: 0.95, // Slight scaling 
        }}
       animate={controls}
       className={""}
