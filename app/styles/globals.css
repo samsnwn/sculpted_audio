@@ -4,10 +4,7 @@
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
-  }
-  body {
-    @apply bg-background text-foreground;
+    @apply !scroll-smooth;
   }
   button {
     @apply active:outline-none;

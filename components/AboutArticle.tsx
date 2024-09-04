@@ -40,10 +40,10 @@ const AboutArticle: React.FC<ArticleProps> = ({ article, index }) => {
       key={index}
       ref={ref}
       initial={{ 
-        x: index % 2 === 0 ? -30 : 10,
+        x: 10,
         opacity: 0,
-        y: 15,    // Subtle vertical movement
-        scale: 0.95, // Slight scaling 
+        y: 12, 
+        scale: 0.95,
        }}
       animate={controls}
       className={""}
