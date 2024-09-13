@@ -72,7 +72,6 @@ const AboutCard: React.FC<CardProps> = ({ card, index }) => {
         <CardContent>
           <CardDescription>{card.content}</CardDescription>
         </CardContent>
-        <CardFooter></CardFooter>
       </Card>
     </motion.div>
   );

@@ -96,3 +96,23 @@ export const cards = [
       "Enol's journey in the audio world began around 2008 when he and his friends purchased their first condenser microphone and sound card to record songs using the free software Audacity. His passion for music and sound led him to study at CES and TAI schools in Madrid (2013-2018). Enol's early career included working as an audio editor for television series in 2015 and developing his electronic music project, natif.orchestra. His experience in live sound, particularly in Barcelona, involved working for festivals such as Sónar and Pride BCN. Currently based in Berlin, Enol, along with his partner Dani Tébar, has founded Sculpted Audio—a mixing and mastering studio specializing in electronic music. The studio also offers sound design services for video games, cinema, and advertising.",
   },
 ];
+
+export const clients = [
+  {
+    name: "Kwartz",
+    content: "“Sculpted Audio is my go-to expert for mixing and mastering. Their approach and methods are always very precise, and every session we share in the studio teaches me something valuable to enhance my own music.”",
+    labels:"Pole Group, Mord Records"
+  },
+  {
+    name: "Blanka",
+    content: "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
+    labels:"Room Trax Audio, Planet Records"
+
+  },
+  {
+    name: "Nöle",
+    content: "“Sculpted Audio is my go-to expert for mixing and mastering. Their approach and methods are always very precise, and every session we share in the studio teaches me something valuable to enhance my own music.”",
+    labels:"Stardust, Barro Records"
+
+  },
+]
