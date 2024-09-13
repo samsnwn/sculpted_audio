@@ -5,7 +5,7 @@ import { cn, Props } from "@/utils/cn";
 const Clients: React.FC<Props> = ({ className }) => {
   return (
     <section
-      className={cn("flex flex-col w-full bg-black h-full py-20", className)}
+      className={cn("flex flex-col w-full h-full py-20", className)}
       id="clients"
     >
       <div className="w-5 h-0.5 bg-red border border-red" />

@@ -32,7 +32,7 @@ const Services: React.FC<Props> = ({ className }) => {
   ];
   return (
     <section
-      className={cn("flex flex-col w-full bg-black h-full pt-20", className)}
+      className={cn("flex flex-col w-full h-full pt-20", className)}
       id="services"
     >
       <div className="w-5 h-0.5 bg-red border border-red" />
