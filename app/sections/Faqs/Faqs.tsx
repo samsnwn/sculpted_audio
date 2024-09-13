@@ -1,11 +1,12 @@
 import FaqItem from "./FaqItem";
 import { Accordion } from "@/components/ui/accordion";
 import { faqs } from "../../data/data";
+import { cn, Props } from "@/utils/cn";
 
-const Faqs = () => {
+const Faqs : React.FC<Props> = ({ className })=> {
   return (
     <section
-      className="flex flex-col bg-black h-full pt-20 text-white"
+      className={cn("flex flex-col bg-black h-full pt-20 text-white", className)}
       id="faqs"
     >
       <div className="w-5 h-0.5 bg-red border border-red" />

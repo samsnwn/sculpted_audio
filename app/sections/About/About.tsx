@@ -1,12 +1,13 @@
 import AboutArticle from "./AboutArticle";
 import AboutCard from "./AboutCard";
 import { articles, cards } from "../../data/data";
+import { cn, Props } from "@/utils/cn";
 
-const About = () => {
+const About: React.FC<Props> = ({ className }) => {
 
   return (
     <section
-      className="flex flex-col h-full h-full py-20 bg-black w-full px-2"
+      className={cn("flex flex-col h-full h-full py-20 bg-black w-full px-2", className)}
       id="about"
     >
       <div className="w-5 h-0.5 bg-red border border-red" />

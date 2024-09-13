@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "bg-black lg:mx-auto w-full max-w-[1880px]",
+          "bg-black lg:mx-auto w-full",
           gtPressura.className
         )}
         id="home"

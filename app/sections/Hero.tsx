@@ -1,9 +1,9 @@
 import { gtPressuraMono } from "@/app/styles/fonts";
-import { cn } from "@/utils/cn";
+import { cn, Props } from "@/utils/cn";
 
-const Hero = () => {
+const Hero: React.FC<Props> = ({ className })=> {
   return (
-    <section className="flex flex-col justify-center md:flex-row items-center h-screen md:justify-start">
+    <section className={cn("flex flex-col justify-center md:flex-row items-center h-screen md:justify-start", className)}>
       <article className="flex flex-col md:w-1/2 gap-20 md:gap-32 xs:p-10 md:h-screen md:ml-20">
         <div className="flex flex-col justify-between md:max-w-[600px]">
           {/* <div className="w-5 h-0.5 bg-red border border-red" />
