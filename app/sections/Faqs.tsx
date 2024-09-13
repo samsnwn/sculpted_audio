@@ -8,7 +8,7 @@ import {
 const Faqs = () => {
   return (
     <section
-      className="flex flex-col w-full bg-black h-screen pt-20 text-white"
+      className="flex flex-col w-full bg-black h-full pt-20 text-white"
       id="faqs"
     >
       <div className="w-5 h-0.5 bg-red border border-red" />
