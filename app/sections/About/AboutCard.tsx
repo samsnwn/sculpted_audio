@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 
 import { useAnimation, motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
