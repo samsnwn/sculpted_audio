@@ -1,15 +1,13 @@
 import { gtPressuraMono } from "@/app/styles/fonts";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
-import Rock from "../../public/images/Rocks//Quartz-2.png";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center h-screen justify-between md:justify-start">
+    <section className="flex flex-col justify-center md:flex-row items-center h-screen md:justify-start">
       <article className="flex flex-col md:w-1/2 gap-20 md:gap-32 xs:p-10 md:h-screen md:ml-20">
         <div className="flex flex-col justify-between md:max-w-[600px]">
-          <div className="w-5 h-0.5 bg-red border border-red" />
-          <div className="w-0.5 bg-red h-4 border border-red" />
+          {/* <div className="w-5 h-0.5 bg-red border border-red" />
+          <div className="w-0.5 bg-red h-4 border border-red" /> */}
           <h1 className="text-white-100 text-5xl md:text-6xl lg:text-7xl md:items-start text-center md:text-start md:ml-5">
             WE BELIEVE IN THE ART OF SONIC SCULPTING
           </h1>
