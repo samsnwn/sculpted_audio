@@ -58,7 +58,7 @@ const AboutCard: React.FC<CardProps> = ({ card, index }) => {
         scale: 0.95,
       }}
       animate={controls}
-      className="w-[95%]"
+      className="w-[98%]"
     >
       <Card className="overflow-hidden max-w-[800px] lg:max-w-[800px]">
         <Image
