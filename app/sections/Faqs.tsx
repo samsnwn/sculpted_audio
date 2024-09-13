@@ -16,7 +16,7 @@ const Faqs = () => {
       <h2 className="text-white text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start">
         FAQs
       </h2>
-      <div className="w-[90vw] m-auto">
+      <div className="w-[90vw] m-auto py-20">
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger>
