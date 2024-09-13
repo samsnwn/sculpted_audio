@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
-import Header from "@/app/sections/Header";
+import Header from "@/components/Header";
 import { cn } from "@/utils/cn";
 import { gtPressura } from "./styles/fonts";
 import Footer from "@/app/sections/Footer";
