@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mic, Headphones, Music, Users } from "lucide-react";
 import { cn, Props } from "@/utils/cn";
 import ServiceItem from "./ServiceItem";

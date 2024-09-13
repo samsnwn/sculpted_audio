@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" }, // Fallback .ico file
-      { url: "/favicon.png", type: "image/png" }, 
+      { url: "/favicon.png", type: "image/png" },
     ],
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
@@ -32,22 +32,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          "bg-black lg:mx-auto w-full",
-          gtPressura.className
-        )}
+        className={cn("bg-black lg:mx-auto w-full", gtPressura.className)}
         id="home"
       >
-        <main className="w-full h-screen flex flex-col items-center justify-center">
-          <h1 className="text-white text-2xl text-center">
-          Coming Soon...
-          </h1>
-        <Footer/>
-
-        </main>
-        {/* <Header />
-        <main className="flex flex-col h-full overflow-hidden">{children}</main> */}
-        {/* <Footer/> */}
+        {/* <main className="w-full h-screen flex flex-col items-center justify-center">
+          <h1 className="text-white text-2xl text-center">Coming Soon...</h1>
+          <Footer />
+        </main> */}
+        <Header />
+        <main className="flex flex-col h-full overflow-hidden">{children}</main>
+        <Footer />
       </body>
     </html>
   );
