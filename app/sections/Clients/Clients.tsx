@@ -13,7 +13,7 @@ const Clients: React.FC<Props> = ({ className }) => {
       <h2 className="text-white text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start">
         Clients
       </h2>
-      <div className="flex flex-col lg:flex-row items-center m-auto justify-center gap-5 pt-5">
+      <div className="flex flex-col lg:flex-row items-center m-auto justify-center gap-5 pt-10">
         {clients.map((client, index) => (
           <ClientCard client={client} index={index} key={index}/>
         ))}
