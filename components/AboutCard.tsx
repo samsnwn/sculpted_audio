@@ -47,7 +47,7 @@ const AboutCard: React.FC<CardProps> = ({ card, index }) => {
       });
     }
   }, [controls, inView]);
-  
+
   return (
     <motion.div
       ref={ref}
@@ -58,7 +58,7 @@ const AboutCard: React.FC<CardProps> = ({ card, index }) => {
         scale: 0.95,
       }}
       animate={controls}
-      className="w-[90%]"
+      className="w-[95%]"
     >
       <Card className="overflow-hidden max-w-[800px] lg:max-w-[800px]">
         <Image

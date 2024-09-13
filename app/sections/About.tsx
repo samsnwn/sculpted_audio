@@ -55,7 +55,7 @@ const About = () => {
           <AboutCard key={index} card={card} index={index}/>
         ))}
       </div>
-      <div className="flex flex-col space-y-10 pt-20 px-10">
+      <div className="flex flex-col space-y-10 pt-20 px-3">
         {articles.map((article, index) => (
           <AboutArticle key={index} article={article} index={index}/>
         ))}
