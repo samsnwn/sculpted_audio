@@ -2,6 +2,7 @@ import * as React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mic, Headphones, Music, Users } from "lucide-react";
 import { cn, Props } from "@/utils/cn";
+import ServiceItem from "./ServiceItem";
 
 const Services: React.FC<Props> = ({ className }) => {
   const services = [
@@ -26,8 +27,7 @@ const Services: React.FC<Props> = ({ className }) => {
     {
       icon: <Users className="h-8 w-8 mb-4 text-red" />,
       title: "OPTIONAL EXTRAS ",
-      description:
-        "	- CD DDP Image \n - Vinyl Premaster",
+      description: "	- CD DDP Image \n - Vinyl Premaster",
     },
   ];
   return (
@@ -40,26 +40,11 @@ const Services: React.FC<Props> = ({ className }) => {
       <h2 className="text-white text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start">
         Services
       </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="bg-white border-gray-700 hover:bg-gray-750 transition-colors duration-300"
-              >
-                <CardHeader>
-                  <div className="flex justify-center">{service.icon}</div>
-                  <CardTitle className="text-xl font-semibold text-center">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 text-center text-md">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10">
+        {services.map((service, index) => (
+          <ServiceItem key={index} index={index} service={service} />
+        ))}
+      </div>
     </section>
   );
 };
