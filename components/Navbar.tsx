@@ -12,10 +12,10 @@ const links = [
     title: "Services",
     slug: "#services",
   },
-  {
-    title: "Portfolio",
-    slug: "#portfolio",
-  },
+  // {
+  //   title: "Portfolio",
+  //   slug: "#portfolio",
+  // },
   {
     title: "Clients",
     slug: "#clients",
@@ -23,6 +23,10 @@ const links = [
   {
     title: "About",
     slug: "#about",
+  },
+  {
+    title: "FAQs",
+    slug: "#faqs",
   },
   {
     title: "Contact",

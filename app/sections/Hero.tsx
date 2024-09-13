@@ -28,7 +28,7 @@ const Hero = () => {
           </h2>
         </div>
       </article>
-      <article className="pb-32 rotate-45 -z-50 sm:hidden opacity-0.5">
+      {/* <article className="pb-32 rotate-45 -z-50 sm:hidden opacity-0.5">
         <Image src={Rock} alt="Rock" width={70} className="mx-auto" />
       </article>
       <article className="mt-10 rotate-45 -z-50 hidden sm:flex md:hidden opacity-0.5">
@@ -36,7 +36,7 @@ const Hero = () => {
       </article>
       <article className="mt-10 rotate-45 -z-50 hidden md:flex opacity-0.5">
         <Image src={Rock} alt="Rock" width={125} className="mx-auto" />
-      </article>
+      </article> */}
     </section>
   );
 };
