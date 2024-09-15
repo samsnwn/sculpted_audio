@@ -36,6 +36,10 @@ export default function RootLayout({
         id="home"
       >
         <Header />
+        {/* <main className="w-full h-screen flex flex-col items-center justify-center">
+          <h1 className="text-white text-2xl text-center">Coming Soon...</h1>
+          <Footer />
+        </main> */}
         <main className="flex flex-col h-full overflow-hidden">{children}</main>
         <Footer />
       </body>
