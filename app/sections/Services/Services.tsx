@@ -8,25 +8,16 @@ import Numbers from "@/components/Texts/Numbers";
 const Services: React.FC<Props> = ({ className }) => {
   return (
     <section className={cn("flex flex-col w-full py-20 bg-gray", className)} id="services">
-        <div className="flex justify-between w-[85%] mx-auto text-white-100">
-          <Numbers className="text-7xl text-white">[01]</Numbers>
-          {/* OUR 4 SERVICES title */}
-          <div className="text-right mb-16 pt-8">
-            <AltSubheadline className="text-6xl md:text-7xl lg:text-8xl font-light">
-              OUR
-              {/* <br />
-              <span className="text-8xl">4</span> */}
-              <br />
-              SERVICES
+      <div className="w-[90%] mx-auto">
+        <div className="flex justify-between md:items-center mb-16">
+          <Numbers className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-0">
+            [01]
+          </Numbers>
+            <AltSubheadline className="text-white-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-tight">
+              OUR<br className="" /> SERVICES
             </AltSubheadline>
-            {/* <h2 className="text-6xl md:text-7xl lg:text-8xl font-light">
-              OUR
-              <br />
-              SERVICES
-            </h2> */}
-          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div key={index} className={cn(
               "w-full",
@@ -41,8 +32,9 @@ const Services: React.FC<Props> = ({ className }) => {
             </div>
           ))}
         </div>
+      </div>
     </section>
   )
 }
 
-export default Services
+export default Services;

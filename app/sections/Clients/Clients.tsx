@@ -9,7 +9,7 @@ const Clients: React.FC<Props> = ({ className }) => {
       <div className="w-[90%] mx-auto">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
-        <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl font-light ml-5 md:items-start mb-10">OUR CLIENTS</AltSubheadline>
+        <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl font-light ml-5 md:items-start mb-16">OUR CLIENTS</AltSubheadline>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full mx-auto">
           {clients.map((client, index) => (
             <div key={index} className={cn(

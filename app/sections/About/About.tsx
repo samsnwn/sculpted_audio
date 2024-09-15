@@ -14,7 +14,7 @@ const About: React.FC<Props> = ({ className }) => {
       <div className="w-[90%] mx-auto">
       <div className="w-5 h-0.5 bg-red border border-red" />
       <div className="w-0.5 bg-red h-4 border border-red" />
-      <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-10 font-light">ABOUT US</AltSubheadline>
+      <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-16 font-light">ABOUT US</AltSubheadline>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center m-auto justify-center gap-5 w-[95%]">
