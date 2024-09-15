@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const Contact: React.FC<Props> = ({ className }) => {
   return (
     <section
-      className={cn(`flex flex-col w-full h-full pt-20`, className)}
+      className={cn(`flex flex-col w-full h-full pt-20 bg-white`, className)}
       id="contact"
     >
       <div className="max-w-[1880px] w-full m-auto">

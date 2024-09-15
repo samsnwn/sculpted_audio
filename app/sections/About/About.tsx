@@ -2,6 +2,7 @@ import AboutArticle from "./AboutArticle";
 import AboutCard from "./AboutCard";
 import { articles, cards } from "../../data/data";
 import { cn, Props } from "@/utils/cn";
+import AltSubheadline from "@/components/Texts/AltSubheadline";
 
 const About: React.FC<Props> = ({ className }) => {
 
@@ -10,18 +11,18 @@ const About: React.FC<Props> = ({ className }) => {
       className={cn("flex flex-col h-full py-20 w-full px-2", className)}
       id="about"
     >
+      <div className="w-[90%] mx-auto">
       <div className="w-5 h-0.5 bg-red border border-red" />
       <div className="w-0.5 bg-red h-4 border border-red" />
-      <h2 className="text-white text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-10">
-        About
-      </h2>
+      <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-10 font-light">ABOUT US</AltSubheadline>
+      </div>
 
-      <div className="flex flex-col lg:flex-row items-center m-auto justify-center gap-5">
+      <div className="flex flex-col lg:flex-row items-center m-auto justify-center gap-5 w-[95%]">
         {cards.map((card, index) => (
           <AboutCard key={index} card={card} index={index}/>
         ))}
       </div>
-      <div className="flex flex-col space-y-10 pt-20 px-3">
+      <div className="flex flex-col space-y-10 pt-20 px-3 w-[85%] mx-auto">
         {articles.map((article, index) => (
           <AboutArticle key={index} article={article} index={index}/>
         ))}

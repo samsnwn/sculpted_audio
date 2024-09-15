@@ -15,9 +15,7 @@ export default function Home() {
       <Clients className="max-w-[1880px] w-full m-auto"/>
       <About className="max-w-[1880px] w-full m-auto"/>
       <Faqs className="max-w-[1880px] w-full m-auto"/>
-      <div className="bg-white">
-        <Contact className="max-w-[1880px] w-full m-auto"/>
-      </div>
+      <Contact className="max-w-[1880px] w-full m-auto"/>
     </>
   );
 }

@@ -49,7 +49,6 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
         scale: 0.9,
       }}
       animate={controls}
-      className="w-[95%] mx-auto"
     >
       <Card className="bg-black/30 text-white h-full flex flex-col w-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl border border-gray-600 max-w-sm">
         <CardHeader className="pb-2">

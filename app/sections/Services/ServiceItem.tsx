@@ -6,6 +6,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Mic, Headphones, Music, Users } from "lucide-react";
+import Body from "@/components/Texts/Body";
 
 type Service = {
   title: string
@@ -68,7 +69,6 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
         scale: 0.9,
       }}
       animate={controls}
-      className="h-full w-full"
     >
       <Card className="bg-gray-800/10 text-white h-full flex flex-col w-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl border border-gray-600 text-center">
         <CardHeader className="pb-2">
@@ -82,9 +82,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
           </h3>
         </CardHeader>
         <CardContent className="py-4 px-2 sm:px-4 flex-grow flex flex-col justify-between">
-          <p className="text-gray-300 text-sm leading-relaxed">
-            {service.description}
-          </p>
+            <Body className="text-gray-300 text-sm">{service.description}</Body>
           {isLast && isLastInRow && (
             <div className="mt-auto hidden md:block h-24" />
           )}
