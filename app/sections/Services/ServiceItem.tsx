@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -42,7 +42,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
     }
   }, [controls, inView, index])
 
-  const isLastInRow = isLast && totalServices % 3 !== 0;
+  const isLastInRow = isLast && totalServices % 2 !== 0;
 
   const IconComponent = () => {
     switch (service.icon) {
@@ -68,25 +68,25 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
         scale: 0.9,
       }}
       animate={controls}
-      className={`h-full w-[98%] ${isLastInRow ? 'lg:h-auto' : ''}`}
+      className="h-full w-full"
     >
-      <Card className="bg-white text-black h-full flex flex-col w-full mx-auto max-w-[800px] lg:max-w-[800px]">
+      <Card className="bg-gray-800/10 text-white h-full flex flex-col w-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl border border-gray-600 text-center">
         <CardHeader className="pb-2">
           <div className="flex justify-center mb-3">
             <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
               <IconComponent />
             </div>
           </div>
-          <h3 className="text-lg font-semibold text-center text-black">
+          <h3 className="text-lg font-semibold">
             {service.title}
           </h3>
         </CardHeader>
         <CardContent className="py-4 px-2 sm:px-4 flex-grow flex flex-col justify-between">
-          <p className="text-gray-700 text-center text-sm leading-relaxed">
+          <p className="text-gray-300 text-sm leading-relaxed">
             {service.description}
           </p>
-          {isLast && (
-            <div className={`mt-auto ${isLastInRow ? 'hidden lg:block' : 'hidden'} h-24 lg:h-0`}></div>
+          {isLast && isLastInRow && (
+            <div className="mt-auto hidden md:block h-24" />
           )}
         </CardContent>
       </Card>

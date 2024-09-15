@@ -18,4 +18,6 @@
       Everything produced must be operationally sound. We consider how to host, manage, monitor, and maintain our solutions. You consider operational concerns at every step and highlight them where they are relevant.
 
       Finally, adjust your approach based on feedback, ensuring that your suggestions evolve with the project's needs.
+
+      When changing styles.css always added to /app/styles/globals.css, dont create a new styles folder and a new globals.css file.
     

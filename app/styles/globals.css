@@ -29,3 +29,25 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #2D2928;
 }
+
+@keyframes subtleMove {
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 51% 50%;
+  }
+}
+
+.animate-subtle-move {
+  animation: subtleMove 10s ease-in-out infinite;
+}
+
+/* Add this new class for the shadow animation */
+.hover-shadow-animation {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hover-shadow-animation:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

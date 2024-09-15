@@ -3,6 +3,7 @@ import GridBackground from "@/components/GridBackground";
 import Headline from "@/components/Texts/Headline";
 import Subheadline from "@/components/Texts/Subheadline";
 import { cn, Props } from "@/utils/cn";
+import Image from 'next/image';
 
 const Hero: React.FC<Props> = ({ className }) => {
   return (
@@ -22,7 +23,11 @@ const Hero: React.FC<Props> = ({ className }) => {
               We transform sound into art. Our state-of-the-art facilities and expert team are dedicated to delivering unmatched quality in audio mastering, mixing, and sound design. We elevate your sound to new heights, ensuring every detail is perfected.
             </Subheadline>
           </div>
+
         </div>
+        {/* <div>
+          <Image src={heroImage} alt="Hero" width={750} height={750} />
+        </div> */}
       </div>
     </section>
   );
