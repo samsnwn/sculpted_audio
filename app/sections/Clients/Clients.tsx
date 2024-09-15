@@ -5,8 +5,8 @@ import AltSubheadline from "@/components/Texts/AltSubheadline";
 
 const Clients: React.FC<Props> = ({ className }) => {
   return (  
-    <section className={cn("flex flex-col w-full py-20 bg-gray", className)} id="clients">
-      <div className="w-[90%] mx-auto">
+    <section className={cn("w-full bg-gray", className)} id="clients">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
         <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl font-light ml-5 md:items-start mb-16">OUR CLIENTS</AltSubheadline>

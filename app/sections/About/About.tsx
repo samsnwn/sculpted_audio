@@ -5,27 +5,26 @@ import { cn, Props } from "@/utils/cn";
 import AltSubheadline from "@/components/Texts/AltSubheadline";
 
 const About: React.FC<Props> = ({ className }) => {
-
   return (
     <section
-      className={cn("flex flex-col h-full pt-20 w-full px-2", className)}
+      className={cn("w-full", className)}
       id="about"
     >
-      <div className="w-[90%] mx-auto">
-      <div className="w-5 h-0.5 bg-red border border-red" />
-      <div className="w-0.5 bg-red h-4 border border-red" />
-      <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-16 font-light">ABOUT US</AltSubheadline>
-      </div>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="w-5 h-0.5 bg-red border border-red" />
+        <div className="w-0.5 bg-red h-4 border border-red" />
+        <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-16 font-light">ABOUT US</AltSubheadline>
 
-      <div className="flex flex-col lg:flex-row items-center m-auto justify-center gap-5 w-[95%]">
-        {cards.map((card, index) => (
-          <AboutCard key={index} card={card} index={index}/>
-        ))}
-      </div>
-      <div className="flex flex-col space-y-10 pt-20 px-3 w-[85%] mx-auto">
-        {articles.map((article, index) => (
-          <AboutArticle key={index} article={article} index={index}/>
-        ))}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-5">
+          {cards.map((card, index) => (
+            <AboutCard key={index} card={card} index={index}/>
+          ))}
+        </div>
+        <div className="flex flex-col space-y-10 pt-20">
+          {articles.map((article, index) => (
+            <AboutArticle key={index} article={article} index={index}/>
+          ))}
+        </div>
       </div>
     </section>
   );

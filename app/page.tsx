@@ -1,21 +1,19 @@
-import About from "@/app/sections/About/About";
-import Clients from "@/app/sections/Clients/Clients";
-import Contact from "@/app/sections/Contact/Contact";
-import Hero from "@/app/sections/Hero";
-import Portfolio from "@/app/sections/Portfolio";
-import Services from "@/app/sections/Services/Services";
+import Hero from "./sections/Hero";
+import Services from "./sections/Services/Services";
+import Clients from "./sections/Clients/Clients";
+import About from "./sections/About/About";
 import Faqs from "./sections/Faqs/Faqs";
+import Contact from "./sections/Contact/Contact";
 
 export default function Home() {
   return (
     <>
-      <Hero className="max-w-[1880px] w-full m-auto"/>
-      <Services className="max-w-[1880px] w-full m-auto"/>
-      {/* <Portfolio/> */}
-      <Clients className="max-w-[1880px] w-full m-auto"/>
-      <About className="max-w-[1880px] w-full m-auto"/>
-      <Faqs className="max-w-[1880px] w-full m-auto"/>
-      <Contact className="max-w-[1880px] w-full m-auto"/>
+      <Hero />
+      <Services />
+      <Clients />
+      <About />
+      <Faqs />
+      <Contact />
     </>
   );
 }
