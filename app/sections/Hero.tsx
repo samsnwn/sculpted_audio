@@ -1,3 +1,5 @@
+import React from 'react';
+import GridBackground from "@/components/GridBackground";
 import Headline from "@/components/Texts/Headline";
 import Subheadline from "@/components/Texts/Subheadline";
 import { cn, Props } from "@/utils/cn";
@@ -5,6 +7,7 @@ import { cn, Props } from "@/utils/cn";
 const Hero: React.FC<Props> = ({ className }) => {
   return (
     <section className={cn("flex items-center min-h-screen px-4 md:px-8 lg:px-16", className)}>
+      {/* <GridBackground className="text-neutral-700" /> */}
       <div className="w-full max-w-7xl">
         <div className="lg:w-2/3 flex flex-col gap-8 md:gap-12 text-center lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
           <div className="space-y-4">
