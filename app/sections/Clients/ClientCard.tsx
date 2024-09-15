@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { QuoteIcon } from "lucide-react";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
@@ -19,46 +19,50 @@ type ClientProps = {
 };
 
 const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
-  const controls = useAnimation();
+  const controls = useAnimation()
   const { ref, inView } = useInView({
     triggerOnce: true,
-  });
+    threshold: 0.1,
+  })
 
   useEffect(() => {
     if (inView) {
       controls.start({
         opacity: 1,
-        x: 0,
         y: 0,
         scale: 1,
         transition: {
-          duration: 1,
+          duration: 0.5,
+          delay: index * 0.1,
           ease: "easeOut",
         },
-      });
+      })
     }
-  }, [controls, inView]);
+  }, [controls, inView, index])
 
   return (
     <motion.div       
-    ref={ref}
-    initial={{
-      x: 10,
-      opacity: 0,
-      y: 12,
-      scale: 0.95,
-    }}
-    animate={controls}>
-
-      <Card className="w-[350px] bg-black text-white">
-        <CardContent className="pt-6 pb-6 px-6">
-          <QuoteIcon className="h-8 w-8 mb-4 opacity-70 text-red" />
-          <blockquote className="text-lg mb-4 text-silver">{client.content}</blockquote>
-          <div className="flex items-center">
-            <div>
-              <div className="font-bold text-2xl">{client.name}</div>
-              <div className="text-sm opacity-70">{client.labels}</div>
+      ref={ref}
+      initial={{
+        opacity: 0,
+        y: 50,
+        scale: 0.9,
+      }}
+      animate={controls}
+    >
+      <Card className="bg-black text-white hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 w-full max-w-sm">
+        <CardHeader className="pb-2">
+          <div className="flex justify-center mb-3">
+            <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
+              <QuoteIcon className="h-8 w-8 text-red" />
             </div>
+          </div>
+        </CardHeader>
+        <CardContent className="py-4 px-4">
+          <blockquote className="text-silver text-center text-sm leading-relaxed mb-4">{client.content}</blockquote>
+          <div className="text-center">
+            <div className="font-bold text-lg">{client.name}</div>
+            <div className="text-sm opacity-70">{client.labels}</div>
           </div>
         </CardContent>
       </Card>

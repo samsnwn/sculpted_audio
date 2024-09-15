@@ -15,35 +15,35 @@ type ArticleProps = {
 };
 
 const AboutArticle: React.FC<ArticleProps> = ({ article, index }) => {
-  const controls = useAnimation();
+  const controls = useAnimation()
   const { ref, inView } = useInView({
     triggerOnce: true,
-  });
+    threshold: 0.1,
+  })
 
   useEffect(() => {
     if (inView) {
       controls.start({
         opacity: 1,
-        x: 0,
         y: 0,
         scale: 1,
         transition: {
-          duration: 1,
-          ease: "easeOut"
-        }
-      });
+          duration: 0.5,
+          delay: index * 0.1,
+          ease: "easeOut",
+        },
+      })
     }
-  }, [controls, inView]);
+  }, [controls, inView, index])
 
   return (
     <motion.article
       key={index}
       ref={ref}
       initial={{ 
-        x: 10,
         opacity: 0,
-        y: 12, 
-        scale: 0.95,
+        y: 50,
+        scale: 0.9,
        }}
       animate={controls}
       className={""}

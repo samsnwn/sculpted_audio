@@ -21,35 +21,35 @@ type FaqProps = {
 }
 
 const FaqItem : React.FC<FaqProps> = ({faq, index}) => {
-  const controls = useAnimation();
+  const controls = useAnimation()
   const { ref, inView } = useInView({
     triggerOnce: true,
-  });
+    threshold: 0.1,
+  })
 
   useEffect(() => {
     if (inView) {
       controls.start({
         opacity: 1,
-        x: 0,
         y: 0,
         scale: 1,
         transition: {
-          duration: 1,
+          duration: 0.5,
+          delay: index * 0.1,
           ease: "easeOut",
         },
-      });
+      })
     }
-  }, [controls, inView]);
+  }, [controls, inView, index])
 
   return (
     <motion.div
       key={index}
       ref={ref}
       initial={{
-        x: 10,
-        opacity: 0,
-        y: 12,
-        scale: 0.95,
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
       }}
       animate={controls}
     >

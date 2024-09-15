@@ -19,9 +19,6 @@ const Contact: React.FC<Props> = ({ className }) => {
               Contact us to help you develop your project
             </h3>
           </div>
-          {/* <div className="-rotate-45 translate-x-16 md:translate-x-32">
-          <Image src={Rock} alt="Rock" width={150} height={150}/>
-        </div> */}
         </div>
         <ContactForm />
       </div>

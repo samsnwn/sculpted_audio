@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <header
       className={`sticky top-0 transition-background duration-300 rounded-md text-white p-2 md:p-3 lg:p-4 z-50  ${
-        isScrolled ? "bg-gray shadow-2xl" : "bg-black"
+        isScrolled ? "bg-gray/80 backdrop-blur-sm shadow-2xl" : "bg-transparent"
       }`}
     >
       <div className="max-w-[1920px] w-full m-auto flex justify-between">

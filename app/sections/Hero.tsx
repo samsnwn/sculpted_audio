@@ -1,40 +1,26 @@
-import { gtPressuraMono } from "@/app/styles/fonts";
+import Headline from "@/components/Texts/Headline";
+import Subheadline from "@/components/Texts/Subheadline";
 import { cn, Props } from "@/utils/cn";
 
-const Hero: React.FC<Props> = ({ className })=> {
+const Hero: React.FC<Props> = ({ className }) => {
   return (
-    <section className={cn("flex flex-col justify-center md:flex-row items-center h-screen md:justify-start", className)}>
-      <article className="flex flex-col md:w-1/2 gap-20 md:gap-32 xs:p-10 md:h-screen md:ml-20">
-        <div className="flex flex-col justify-between md:max-w-[600px]">
-          {/* <div className="w-5 h-0.5 bg-red border border-red" />
-          <div className="w-0.5 bg-red h-4 border border-red" /> */}
-          <h1 className="text-white-100 text-5xl md:text-6xl lg:text-7xl md:items-start text-center md:text-start md:ml-5">
-            WE BELIEVE IN THE ART OF SONIC SCULPTING
-          </h1>
+    <section className={cn("flex items-center min-h-screen px-4 md:px-8 lg:px-16", className)}>
+      <div className="w-full max-w-7xl">
+        <div className="lg:w-2/3 flex flex-col gap-8 md:gap-12 text-center lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
+          <div className="space-y-4">
+            <div className="w-20 h-1 bg-red-500 mx-auto lg:mx-0" />
+            <Headline className="text-white-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left">
+              WE BELIEVE IN THE ART OF SONIC SCULPTING
+            </Headline>
+          </div>
+
+          <div className="max-w-2xl mx-auto lg:mx-0">
+            <Subheadline className="text-white text-sm sm:text-base md:text-lg text-center lg:text-left">
+              We transform sound into art. Our state-of-the-art facilities and expert team are dedicated to delivering unmatched quality in audio mastering, mixing, and sound design. We elevate your sound to new heights, ensuring every detail is perfected.
+            </Subheadline>
+          </div>
         </div>
-        <div className="sm:max-w-[350px] xs:max-w-[350px] md:max-w-[400px] md:ml-6 mx-auto">
-          <h2
-            className={cn(
-              "text-white text-sm sm:text-md text-center md:text-start",
-              gtPressuraMono.className
-            )}
-          >
-            We transform sound into art. Our state-of-the-art facilities and
-            expert team are dedicated to delivering unmatched quality in audio
-            mastering, mixing, and sound design. We elevate your sound to new
-            heights, ensuring every detail is perfected.
-          </h2>
-        </div>
-      </article>
-      {/* <article className="pb-32 rotate-45 -z-50 sm:hidden opacity-0.5">
-        <Image src={Rock} alt="Rock" width={70} className="mx-auto" />
-      </article>
-      <article className="mt-10 rotate-45 -z-50 hidden sm:flex md:hidden opacity-0.5">
-        <Image src={Rock} alt="Rock" width={100} className="mx-auto" />
-      </article>
-      <article className="mt-10 rotate-45 -z-50 hidden md:flex opacity-0.5">
-        <Image src={Rock} alt="Rock" width={125} className="mx-auto" />
-      </article> */}
+      </div>
     </section>
   );
 };
