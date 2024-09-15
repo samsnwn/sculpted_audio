@@ -8,7 +8,7 @@ const About: React.FC<Props> = ({ className }) => {
 
   return (
     <section
-      className={cn("flex flex-col h-full py-20 w-full px-2", className)}
+      className={cn("flex flex-col h-full pt-20 w-full px-2", className)}
       id="about"
     >
       <div className="w-[90%] mx-auto">
