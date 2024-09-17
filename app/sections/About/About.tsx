@@ -10,7 +10,7 @@ const About: React.FC<Props> = ({ className }) => {
       className={cn("w-full", className)}
       id="about"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="w-full max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
         <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-16 font-light">ABOUT US</AltSubheadline>

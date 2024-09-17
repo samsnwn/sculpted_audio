@@ -77,10 +77,6 @@ export const articles = [
     desc: "OBJECTIVITY, QUALITY, AND AN UNWAVERING COMMITMENT TO EXCELLENCE. THE PREMIER CHOICE FOR PERFECTING AND BRINGING SOUND TO LIFE, SETTING NEW STANDARDS WITH EVERY PROJECT. EDUCATING AND SHARING KNOWLEDGE, BENEFITING OUR CLIENTS AND THE INDUSTRY.",
   },
   {
-    title: "Our people",
-    desc: "FOR CREATORS WITH A UNIQUE VISION, TRUE COLLABORATORS EAGER TO ELEVATETHEIRCREATIONTOTHENEXT LEVEL ALONGSIDE PROFESSIONALS.",
-  },
-  {
     title: "Our approach",
     desc: "AT THE INTERSECTION OF SCULPTING AND AUDIO LIES A UNIQUE VISUAL UNIVERSE, NURTURED IN CRAFT, TECHNIQUE, PRECISION, AND VISION. THIS FUSION OF METICULOUS ARTISTRY AND TECHNICAL PROWESS CREATES COHESIVE VISUALS, REFLECTING A DEDICATION TO EXCELLENCE AND AN UNPARALLELED AESTHETIC.",
   },
@@ -105,18 +101,21 @@ export const clients = [
     content:
       "“Sculpted Audio is my go-to expert for mixing and mastering. Their approach and methods are always very precise, and every session we share in the studio teaches me something valuable to enhance my own music.”",
     labels: "Pole Group, Mord Records",
+    image: "kwartz"
   },
   {
     name: "Blanka",
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
     labels: "Room Trax Audio, Planet Records",
+    image: "blanka"
   },
   {
     name: "Nöle",
     content:
       "“I needed to take a step forward in my mixes, and I achieved it thanks to Sculpted Audio. Full support.”",
     labels: "Stardust, Barro Records",
+    image: "nole"
   },
 ];
 

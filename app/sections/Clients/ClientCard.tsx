@@ -6,11 +6,13 @@ import { QuoteIcon } from "lucide-react";
 import { useAnimation, motion } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 type Client = {
   name: string;
   content: string;
   labels: string
+  image: string;
 };
 
 type ClientProps = {
@@ -49,10 +51,12 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
         scale: 0.9,
       }}
       animate={controls}
+      className="w-full" // Add this line
     >
-      <Card className="bg-black/30 text-white h-full flex flex-col w-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl border border-gray-600 max-w-sm">
+      <Card className="bg-black/30 text-white h-full flex flex-col w-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl border border-gray-600 max-w-sm mx-auto">
         <CardHeader className="pb-2">
           <div className="flex justify-center mb-3">
+            {/* <Image src={client.image} alt={client.image} width={100} height={100}/> */}
             <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
               <QuoteIcon className="h-8 w-8 text-red" />
             </div>
