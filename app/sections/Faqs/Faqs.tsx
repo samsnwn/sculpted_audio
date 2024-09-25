@@ -3,6 +3,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { faqs } from "../../data/data";
 import AltSubheadline from "@/components/Texts/AltSubheadline";
 import Numbers from "@/components/Texts/Numbers";
+import SectionWrapper from "@/components/SectionWrapper";
 
 const Faqs = () => {
   return (
@@ -10,12 +11,12 @@ const Faqs = () => {
       className="w-full"
       id="faqs"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <SectionWrapper className="py-20">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
         <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
-          <AltSubheadline className="text-white-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-tight">
-           FAQs
+          <AltSubheadline className="text-white-100 font-light leading-tight">
+            FAQs
           </AltSubheadline>
           <Numbers className="text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-0">
             [04]
@@ -30,7 +31,7 @@ const Faqs = () => {
             ))}
           </Accordion>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

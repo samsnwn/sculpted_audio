@@ -27,8 +27,8 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
           src={client.image}
           alt="Card image"
           className="w-full h-full object-cover"
-          width={150}
-          height={150}
+          width={1000}
+          height={1000}
         />
         <Transition
           show={isHovering}
