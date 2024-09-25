@@ -12,13 +12,13 @@ const Hero = () => {
     <section className="w-full min-h-screen flex items-center m-auto">
       {/* <GridBackground className="text-neutral-700" /> */}
       <SectionWrapper>
-        <div className="lg:w-2/3 flex flex-col gap-8 md:gap-12 text-center lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
+        <div className="lg:w-2/3 flex flex-col items-center lg:items-start gap-8 md:gap-12 lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
           <div className="space-y-4">
             <Image
             src={Logo}
             alt="Sculpted Audio Logo"
-            width={500}
-            height={500}
+            width={550}
+            height={550}
             priority
             className="w-auto h-auto"
           />

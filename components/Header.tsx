@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 400);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,27 +29,21 @@ const Header = () => {
     >
       <div className="max-w-7xl w-full m-auto flex justify-between">
         <Link href="#home">
-          <Image
+          {/* <Image
             src={isScrolled ? Logo : Icon}
             alt="Sculpted Audio Logo"
             // width={110}
             // height={110}
             priority
-            className={isScrolled ? "w-full h-12" : "w-7 h-7"}
-          />
-          {/* { isScrolled ? <Image
+            className={isScrolled ? "w-40 h-12" : "w-7 h-7"}
+          /> */}
+          <Image
             src={Logo}
             alt="Sculpted Audio Logo"
-            width={110}
-            height={110}
+            width={125}
+            height={125}
             priority
-          /> : <Image
-            src={Icon}
-            alt="Sculpted Audio Logo"
-            width={25}
-            height={25}
-            priority
-          />} */}
+          />
         </Link>
         <Navbar />
       </div>
