@@ -1,12 +1,12 @@
 import { clients } from "@/app/data/data";
 import ClientCard from "./ClientCard";
 import SlideUpHoverCard from "./SlideUpHoverCard";
-import { cn, Props } from "@/utils/cn";
+import { cn } from "@/utils/cn";
 import AltSubheadline from "@/components/Texts/AltSubheadline";
 
-const Clients: React.FC<Props> = ({ className }) => {
+const Clients = () => {
   return (
-    <section className={cn("w-full", className)} id="clients">
+    <section className="w-full" id="clients">
       <div className="w-full max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />

@@ -1,13 +1,12 @@
 import AboutArticle from "./AboutArticle";
 import AboutCard from "./AboutCard";
 import { articles, cards } from "../../data/data";
-import { cn, Props } from "@/utils/cn";
 import AltSubheadline from "@/components/Texts/AltSubheadline";
 
-const About: React.FC<Props> = ({ className }) => {
+const About = () => {
   return (
     <section
-      className={cn("w-full", className)}
+      className="w-full"
       id="about"
     >
       <div className="w-full max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -20,11 +19,11 @@ const About: React.FC<Props> = ({ className }) => {
             <AboutCard key={index} card={card} index={index}/>
           ))}
         </div>
-        <div className="flex flex-col space-y-10 pt-20">
+        {/* <div className="flex flex-col space-y-10 pt-20">
           {articles.map((article, index) => (
             <AboutArticle key={index} article={article} index={index}/>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

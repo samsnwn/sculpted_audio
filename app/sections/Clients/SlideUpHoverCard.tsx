@@ -4,17 +4,9 @@ import { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import Image from 'next/image';
-import { useAnimation, motion } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import { QuoteIcon } from 'lucide-react';
-
-type Client = {
-  name: string;
-  content: string;
-  labels: string
-  image: string;
-};
+import ScrollWrapper from '@/components/ScrollWrapper';
+import { Client } from '@/app/types';
 
 type ClientProps = {
   client: Client;
@@ -24,38 +16,8 @@ type ClientProps = {
 const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
   const [isHovering, setIsHovering] = useState(false)
 
-  const controls = useAnimation()
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        transition: {
-          duration: 0.5,
-          delay: index * 0.1,
-          ease: "easeOut",
-        },
-      })
-    }
-  }, [controls, inView, index])
-
   return (
-    <motion.div
-      ref={ref}
-      initial={{
-        opacity: 0,
-        y: 50,
-        scale: 0.9,
-      }}
-      animate={controls}
-      className="w-full">
-
+    <ScrollWrapper index={index}>
       <Card
         className="relative h-full w-full overflow-hidden cursor-pointer group max-w-sm mx-auto"
         onMouseEnter={() => setIsHovering(true)}
@@ -102,7 +64,7 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent opacity-70" />
         <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold z-10">{client.name}</h3>
       </Card>
-    </motion.div>
+    </ScrollWrapper>
   )
 }
 

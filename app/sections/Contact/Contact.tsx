@@ -1,11 +1,9 @@
-import { cn, Props } from "@/utils/cn";
 import ContactForm from "./ContactForm";
 
-const Contact: React.FC<Props> = ({ className }) => {
+const Contact = () => {
   return (
     <section
-      className={cn(`flex flex-col w-full h-full bg-white min-h-screen`, className)}
-      id="contact"
+      className="flex flex-col w-full h-full bg-white min-h-screen"      id="contact"
     >
       <div className="max-w-[1680px] w-full m-auto">
         <div className="h-2/3 flex">

@@ -1,13 +1,13 @@
 import * as React from "react";
-import { cn, Props } from "@/utils/cn";
+import { cn } from "@/utils/cn";
 import ServiceItem from "./ServiceItem";
 import { services } from "@/app/data/data";
 import AltSubheadline from "@/components/Texts/AltSubheadline";
 import Numbers from "@/components/Texts/Numbers";
 
-const Services: React.FC<Props> = ({ className }) => {
+const Services = () => {
   return (
-    <section className={cn("w-full", className)} id="services">
+    <section className="w-full" id="services">
       <div className="w-full max-w-[1580px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
           <Numbers className="text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-0">

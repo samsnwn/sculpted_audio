@@ -8,13 +8,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { useAnimation, motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 
 import Dani from "@/public/images/Human/Raw/slugos.jpg";
 import Enol from "@/public/images/Human/Portrait-3.png";
+import ScrollWrapper from "@/components/ScrollWrapper";
 
 type Card = {
   name: string;
@@ -27,38 +25,8 @@ type CardProps = {
 };
 
 const AboutCard: React.FC<CardProps> = ({ card, index }) => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        x: 0,
-        y: 0,
-        scale: 1,
-        transition: {
-          duration: 1,
-          ease: "easeOut",
-        },
-      });
-    }
-  }, [controls, inView]);
-
   return (
-    <motion.div
-      ref={ref}
-      initial={{
-        x: 10,
-        opacity: 0,
-        y: 12,
-        scale: 0.95,
-      }}
-      animate={controls}
-      className="w-[98%]"
-    >
+    <ScrollWrapper index={index} className="w-[98%]">
       <Card className="overflow-hidden max-w-[800px] lg:max-w-[800px]">
         <Image
           src={index === 0 ? Dani : Enol}
@@ -72,7 +40,7 @@ const AboutCard: React.FC<CardProps> = ({ card, index }) => {
           <CardDescription>{card.content}</CardDescription>
         </CardContent>
       </Card>
-    </motion.div>
+    </ScrollWrapper>
   );
 };
 

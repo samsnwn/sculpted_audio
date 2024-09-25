@@ -6,9 +6,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import ScrollWrapper from "@/components/ScrollWrapper";
 
 type Faq = {
   question: string;
@@ -20,44 +19,14 @@ type FaqProps = {
   index: number;
 }
 
-const FaqItem : React.FC<FaqProps> = ({faq, index}) => {
-  const controls = useAnimation()
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  })
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        transition: {
-          duration: 0.5,
-          delay: index * 0.1,
-          ease: "easeOut",
-        },
-      })
-    }
-  }, [controls, inView, index])
-
+const FaqItem: React.FC<FaqProps> = ({ faq, index }) => {
   return (
-    <motion.div
-      key={index}
-      ref={ref}
-      initial={{
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-      }}
-      animate={controls}
-    >
+    <ScrollWrapper index={index}>
       <AccordionItem value={`item-${index}`}>
         <AccordionTrigger>{faq.question}</AccordionTrigger>
         <AccordionContent>{faq.answer}</AccordionContent>
       </AccordionItem>
-    </motion.div>
+    </ScrollWrapper>
   );
 };
 
