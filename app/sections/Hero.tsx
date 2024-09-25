@@ -3,6 +3,9 @@ import GridBackground from "@/components/GridBackground";
 import Headline from "@/components/Texts/Headline";
 import Subheadline from "@/components/Texts/Subheadline";
 import SectionWrapper from '@/components/SectionWrapper';
+import Image from 'next/image';
+import Logo from "@/public/logos/1-RGB/Light/SculptedAudio-Logo-Light-RGB.png";
+
 
 const Hero = () => {
   return (
@@ -11,13 +14,17 @@ const Hero = () => {
       <SectionWrapper>
         <div className="lg:w-2/3 flex flex-col gap-8 md:gap-12 text-center lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
           <div className="space-y-4">
-            <div className="w-20 h-1 bg-red-500 mx-auto lg:mx-0" />
-            <Headline className="text-white-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center lg:text-left">
-              Sculpted Audio
-            </Headline>
+            <Image
+            src={Logo}
+            alt="Sculpted Audio Logo"
+            width={500}
+            height={500}
+            priority
+            className="w-auto h-auto"
+          />
           </div>
           <div className="max-w-2xl mx-auto lg:mx-0">
-            <Subheadline className="text-red text-sm sm:text-base md:text-lg text-center lg:text-left">
+            <Subheadline className="text-red text-sm sm:text-base md:text-lg text-center lg:text-left sm:ml-10">
               elevating sonic <br /> experiences /
             </Subheadline>
           </div>
