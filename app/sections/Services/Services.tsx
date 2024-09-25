@@ -10,11 +10,11 @@ const Services = () => {
   return (
     <section className="w-full" id="services">
       <SectionWrapper className="py-20">
-        <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
-          <Numbers className="text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-0">
+        <div className="flex mx-auto justify-between md:items-center mb-16">
+          <Numbers>
             [01]
           </Numbers>
-          <AltSubheadline className="text-white-100 xl:text-8xl font-light leading-tight">
+          <AltSubheadline className="xl:text-8xl font-light leading-tight">
             OUR<br /> SERVICES
           </AltSubheadline>
         </div>

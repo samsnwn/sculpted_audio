@@ -1,6 +1,5 @@
 import { clients } from "@/app/data/data";
 import ClientCard from "./ClientCard";
-import SlideUpHoverCard from "./SlideUpHoverCard";
 import { cn } from "@/utils/cn";
 import AltSubheadline from "@/components/Texts/AltSubheadline";
 import Numbers from "@/components/Texts/Numbers";
@@ -13,14 +12,13 @@ const Clients = () => {
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
         <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
-          <AltSubheadline className="text-white-100 font-light leading-tight">
+          <AltSubheadline className="font-light leading-tight">
             CLIENTS
           </AltSubheadline>
-          <Numbers className="text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-0">
+          <Numbers>
             [02]
           </Numbers>
         </div>
-        {/* <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl font-light ml-5 md:items-start mb-16">CLIENTS</AltSubheadline> */}
         <div className="text-white p-4 md:p-8 mb-24">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -83,13 +81,12 @@ const Clients = () => {
           {clients.map((client, index) => (
             <div
               key={index}
-            // className={cn(
-            //   index === 2 && "sm:col-span-2 lg:col-span-1",
-            //   index > 2 && "sm:col-span-1"
-            // )}
+              className={cn(
+                index === 2 && "sm:col-span-2 lg:col-span-1",
+                index > 2 && "sm:col-span-1"
+              )}
             >
-              {/* <ClientCard client={client} index={index} /> */}
-              <SlideUpHoverCard client={client} index={index} />
+              <ClientCard client={client} index={index} />
             </div>
           ))}
         </div>

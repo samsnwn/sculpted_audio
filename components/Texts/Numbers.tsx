@@ -11,7 +11,7 @@ interface NumbersProps {
 const Numbers: React.FC<NumbersProps> = ({ children, className, bold = false }) => {
   return (
     <span className={cn(
-      'text-left leading-[1.01] tracking-[0] normal-case',
+      'text-left leading-[1.01] tracking-[0] normal-case text-5xl md:text-6xl lg:text-7xl text-white mb-4 md:mb-0',
       bold ? 'font-bold' : 'font-light',
       gtPressuraMono.className,
       className

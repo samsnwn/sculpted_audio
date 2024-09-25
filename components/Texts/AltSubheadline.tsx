@@ -10,7 +10,7 @@ interface AltSubheadlineProps {
 const AltSubheadline: React.FC<AltSubheadlineProps> = ({ children, className }) => {
   return (
     <h3 className={cn(
-      'text-left font-normal leading-normal tracking-[-0.05em] normal-case text-5xl md:text-6xl lg:text-7xl',
+      'text-left font-normal leading-normal tracking-[-0.05em] normal-case text-5xl md:text-6xl lg:text-7xl text-white-100',
       prGrotesk.className,
       className
     )}>
