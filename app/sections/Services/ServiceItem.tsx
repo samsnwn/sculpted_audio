@@ -45,11 +45,11 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
                 <IconComponent />
               </div>
             </div> */}
-        <h3 className="text-lg pb-2 text-red font-thin">
+        <h3 className="text-xl pb-2 text-red font-thin">
           {service.title}
         </h3>
         <div className="py-4 px-2 sm:px-4 flex-grow flex flex-col justify-between">
-          <Body className="text-gray-300 text-sm">{service.description}</Body>
+          <Body className="text-gray-300 text-base">{service.description}</Body>
           {isLast && isLastInRow && (
             <div className="mt-auto hidden md:block h-24" />
           )}
