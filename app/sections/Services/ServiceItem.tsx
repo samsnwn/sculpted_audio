@@ -39,7 +39,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
 
   return (
     <ScrollWrapper index={index}>
-      <div className="bg-gray-800/10 text-white h-full flex flex-col w-full">
+      <div className="text-white h-full flex flex-col w-full">
         {/* <div className="flex justify-center mb-3">
               <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
                 <IconComponent />
