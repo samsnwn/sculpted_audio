@@ -17,14 +17,12 @@ const Hero = () => {
             <Image
             src={Logo}
             alt="Sculpted Audio Logo"
-            width={550}
-            height={550}
             priority
             className="w-auto h-auto"
           />
           </div>
           <div className="max-w-2xl mx-auto lg:mx-0">
-            <Subheadline className="text-red text-sm sm:text-base md:text-lg text-center lg:text-left sm:ml-10">
+            <Subheadline className="text-red text-base md:text-lg text-center lg:text-left sm:ml-16">
               elevating sonic <br /> experiences /
             </Subheadline>
           </div>

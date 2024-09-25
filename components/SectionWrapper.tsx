@@ -8,7 +8,7 @@ type Props = {
 
 const SectionWrapper: React.FC<Props> = ({children, className}) => {
   return (
-    <div className={cn('w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8', className)}>{children}</div>
+    <div className={cn('w-full max-w-7xl mx-auto px-2 sm:px-3 lg:px-6', className)}>{children}</div>
   )
 }
 

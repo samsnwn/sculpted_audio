@@ -39,24 +39,22 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
 
   return (
     <ScrollWrapper index={index}>
-      <Card className="bg-gray-800/10 text-white h-full flex flex-col w-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl border border-gray-600 text-center">
-        <CardHeader className="pb-2">
-          <div className="flex justify-center mb-3">
-            <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
-              <IconComponent />
-            </div>
-          </div>
-          <h3 className="text-lg font-semibold">
-            {service.title}
-          </h3>
-        </CardHeader>
-        <CardContent className="py-4 px-2 sm:px-4 flex-grow flex flex-col justify-between">
+      <div className="bg-gray-800/10 text-white h-full flex flex-col w-full">
+        {/* <div className="flex justify-center mb-3">
+              <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
+                <IconComponent />
+              </div>
+            </div> */}
+        <h3 className="text-lg pb-2 text-red font-thin">
+          {service.title}
+        </h3>
+        <div className="py-4 px-2 sm:px-4 flex-grow flex flex-col justify-between">
           <Body className="text-gray-300 text-sm">{service.description}</Body>
           {isLast && isLastInRow && (
             <div className="mt-auto hidden md:block h-24" />
           )}
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </ScrollWrapper>
   )
 }
