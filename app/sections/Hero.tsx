@@ -5,7 +5,7 @@ import Subheadline from "@/components/Texts/Subheadline";
 
 const Hero = () => {
   return (
-    <section className="w-full min-h-screen max-w-[1680px] flex items-center m-auto">
+    <section className="w-full min-h-screen flex items-center m-auto">
       {/* <GridBackground className="text-neutral-700" /> */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:w-2/3 flex flex-col gap-8 md:gap-12 text-center lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">

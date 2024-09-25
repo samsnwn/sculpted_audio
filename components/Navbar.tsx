@@ -12,10 +12,6 @@ const links = [
     title: "Services",
     slug: "#services",
   },
-  // {
-  //   title: "Portfolio",
-  //   slug: "#portfolio",
-  // },
   {
     title: "Clients",
     slug: "#clients",

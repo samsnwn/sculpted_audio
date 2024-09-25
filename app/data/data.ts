@@ -100,22 +100,22 @@ export const clients = [
     name: "Kwartz",
     content:
       "“Sculpted Audio is my go-to expert for mixing and mastering. Their approach and methods are always very precise, and every session we share in the studio teaches me something valuable to enhance my own music.”",
-    labels: "Pole Group, Mord Records",
-    image: "/images/Human/Portrait-5.png"
+    labels: "Pole Group, MORD",
+    image: "/Pics/Kwartz.jpg"
   },
   {
     name: "Blanka",
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
-    labels: "Room Trax Audio, Planet Records",
-    image: "/images/Human/Portrait-6 copy.png"
+    labels: "SK_eleven, Room Trax",
+    image: "/Pics/BLANKA ANGIOMA-43.jpg"
   },
   {
     name: "Nöle",
     content:
       "“I needed to take a step forward in my mixes, and I achieved it thanks to Sculpted Audio. Full support.”",
-    labels: "Stardust, Barro Records",
-    image: "/images/Human/Portrait-1.png"
+    labels: "Barro, Bizarro",
+    image: "/Pics/Nöle.jpg"
   },
 ];
 

@@ -3,9 +3,9 @@ import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
     <section
-      className="flex flex-col w-full h-full bg-white min-h-screen"      id="contact"
+      className="flex flex-col w-full h-full bg-white min-h-screen" id="contact"
     >
-      <div className="max-w-[1680px] w-full m-auto">
+      <div className="max-w-7xl w-full m-auto">
         <div className="h-2/3 flex">
           <div className="flex flex-col justify-center h-2/3 p-2 mb-16">
             <div className="w-5 h-0.5 bg-red border border-red" />
