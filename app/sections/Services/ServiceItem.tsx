@@ -1,10 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Mic, Headphones, Music, Users } from "lucide-react";
 import Body from "@/components/Texts/Body";
 import ScrollWrapper from "@/components/ScrollWrapper";
+import * as Accordion from '@radix-ui/react-accordion';
+import { ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type Service = {
   title: string
@@ -20,18 +22,18 @@ type ServiceItemProps = {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, totalServices }) => {
-  const isLastInRow = isLast && totalServices % 2 !== 0;
+  const [isOpen, setIsOpen] = React.useState(true);
 
   const IconComponent = () => {
     switch (service.icon) {
       case "Mic":
-        return <Mic className="h-8 w-8 text-red" />;
+        return <Mic className="h-6 w-6 text-red" />;
       case "Music":
-        return <Music className="h-8 w-8 text-red" />;
+        return <Music className="h-6 w-6 text-red" />;
       case "Headphones":
-        return <Headphones className="h-8 w-8 text-red" />;
+        return <Headphones className="h-6 w-6 text-red" />;
       case "Users":
-        return <Users className="h-8 w-8 text-red" />;
+        return <Users className="h-6 w-6 text-red" />;
       default:
         return null;
     }
@@ -39,22 +41,42 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
 
   return (
     <ScrollWrapper index={index}>
-      <div className="text-white h-full flex flex-col w-full">
-        {/* <div className="flex justify-center mb-3">
-              <div className="p-3 bg-red-500 bg-opacity-20 rounded-full">
-                <IconComponent />
-              </div>
-            </div> */}
-        <h3 className="text-xl pb-2 text-red font-thin">
-          {service.title}
-        </h3>
-        <div className="py-4 px-2 sm:px-4 flex-grow flex flex-col justify-between">
-          <Body className="text-gray-300 text-base">{service.description}</Body>
-          {isLast && isLastInRow && (
-            <div className="mt-auto hidden md:block h-24" />
-          )}
-        </div>
-      </div>
+      <Accordion.Root type="single" collapsible>
+        <Accordion.Item value="item-1">
+          <Accordion.Trigger
+            className="w-full text-white flex items-center justify-between p-4 bg-gray-800 rounded-lg focus:outline-none transition-all duration-300 hover:bg-gray-700"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className="flex items-center">
+              <IconComponent />
+              <h3 className="text-xl ml-3 font-thin">{service.title}</h3>
+            </div>
+            <motion.div
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ChevronDown className="h-5 w-5 text-red" />
+            </motion.div>
+          </Accordion.Trigger>
+          <AnimatePresence initial={false}>
+            {isOpen && (
+              <Accordion.Content forceMount>
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="overflow-hidden"
+                >
+                  <div className="p-4 bg-gray-700 rounded-lg mt-2">
+                    <Body className="text-gray-300 text-base">{service.description}</Body>
+                  </div>
+                </motion.div>
+              </Accordion.Content>
+            )}
+          </AnimatePresence>
+        </Accordion.Item>
+      </Accordion.Root>
     </ScrollWrapper>
   )
 }

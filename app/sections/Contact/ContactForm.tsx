@@ -33,7 +33,7 @@ const formSchema = z.object({
     countryCode: z.string().max(5, "Exceeded maximum length"),
     number: z.string().max(15, "Exceeded maximum length"),
   }),
-  services: z.enum(["artist", "label", "gaming"], {
+  services: z.enum(["stereo mastering", "stem mastering", "mixing"], {
     invalid_type_error: "Invalid service selected",
   }),
   message: z.string().min(1, "Message is required").max(1500, "Exceeded maximum length"),
@@ -49,7 +49,7 @@ const ContactForm = () => {
         countryCode: "",
         number: "",
       },
-      services: "artist",
+      services: "stereo mastering",
       message: "",
     },
   });
@@ -147,51 +147,51 @@ const ContactForm = () => {
               >
                 <div className="flex items-center pl-2">
                   <RadioGroupItem
-                    value="artist"
-                    id="artist"
+                    value="stereo mastering"
+                    id="stereo mastering"
                     className="hidden"
                   />
                   <label
-                    htmlFor="artist"
+                    htmlFor="stereo mastering"
                     className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
-                      field.value === "artist"
+                      field.value === "stereo mastering"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
                     }`}
                   >
-                    Artist
+                    Stereo Mastering
                   </label>
                 </div>
 
                 <div className="flex items-center">
-                  <RadioGroupItem value="label" id="label" className="hidden" />
+                  <RadioGroupItem value="stem mastering" id="stem mastering" className="hidden" />
                   <label
-                    htmlFor="label"
+                    htmlFor="stem mastering"
                     className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
-                      field.value === "label"
+                      field.value === "stem mastering"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
                     }`}
                   >
-                    Label
+                    Stem Mastering
                   </label>
                 </div>
 
                 <div className="flex items-center">
                   <RadioGroupItem
-                    value="gaming"
-                    id="gaming"
+                    value="mixing"
+                    id="mixing"
                     className="hidden"
                   />
                   <label
-                    htmlFor="gaming"
+                    htmlFor="mixing"
                     className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
-                      field.value === "gaming"
+                      field.value === "mixing"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
                     }`}
                   >
-                    Gaming
+                    Mixing
                   </label>
                 </div>
               </RadioGroup>

@@ -9,7 +9,7 @@ export const faqs = [
   {
     question: "In what formats will my masters/pre-masters be delivered?",
     answer:
-      "By default, if no specific requirements are provided, we will deliver masters in the following formats: - WAV 24-bit (up to 192kHz) for distribution and streaming  - WAV 16-bit 44.1kHz for CD production (DDP format available upon request)  - MP3 320 Kbps for referencing and sharing Metadata and ISRC codes will be included if requested and provided",
+      "By default, if no specific requirements are provided, we will deliver masters in the following formats: \n- WAV 24-bit (up to 192kHz) for distribution and streaming  \n- WAV 16-bit 44.1kHz for CD production (DDP format available upon request)  \n- MP3 320 Kbps for referencing and sharing Metadata and ISRC codes will be included if requested and provided",
   },
   {
     question: "What sample rate should my pre-masters be?",
@@ -100,22 +100,56 @@ export const clients = [
     name: "Kwartz",
     content:
       "“Sculpted Audio is my go-to expert for mixing and mastering. Their approach and methods are always very precise, and every session we share in the studio teaches me something valuable to enhance my own music.”",
-    labels: "Pole Group, MORD",
-    image: "/Pics/Kwartz.jpg"
+    labels: "Pole Group / MORD",
+    image: "/Pics/01 Kwartz.jpg"
+  },
+  {
+    name: "POLE075",
+    content:
+    "“Mixed by Dani Tébar”. https://polegroup.bandcamp.com/music",
+    image: "/Pics/EP/POLE075_FRONT.jpg"
   },
   {
     name: "Blanka",
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
-    labels: "SK_eleven, Room Trax",
-    image: "/Pics/BLANKA ANGIOMA-43.jpg"
+    labels: "SK_eleven / Room Trax",
+    image: "/Pics/02 BLANKA.jpg"
+  },
+  {
+    name: "ROOM Trax",
+    content:
+      "“Mastering by Dani Tébar from ROOM038 onwards” https://roomtrax.bandcamp.com/music",
+    image: "/Pics/EP/ROOM Trax Logo.jpg"
   },
   {
     name: "Nöle",
     content:
       "“I needed to take a step forward in my mixes, and I achieved it thanks to Sculpted Audio. Full support.”",
-    labels: "Barro, Bizarro",
-    image: "/Pics/Nöle.jpg"
+    labels: "Barro / Bizarro",
+    image: "/Pics/03 Nole.jpg"
+  },
+  {
+    name: "Dronegone - Lilith",
+    content:
+      "“Sculpted Audio needed just one mix version to make it work and make us happy. The Master was clean and very accurate respecting the mix. Enol Balado is someone that you can definitely trust a kick drum.” https://dronegone.bandcamp.com/album/lilith. Mixed by Enol Balado - Mastered by Dani Tébar ",
+    labels: "Barro / Bizarro",
+    image: "/Pics/EP/DRONEGONE.jpg"
+
+  },
+  {
+    name: "Angioma",
+    content:
+      "“I needed to take a step forward in my mixes, and I achieved it thanks to Sculpted Audio. Full support.”",
+    labels: "Room Trax / Mind Medizin",
+    image: "/Pics/04 Angioma.jpg"
+  },
+  {
+    name: "Caedite Eos",
+    content:
+    "“Mastered by Dani Tébar except CAEDITEOS001 and 002” https://caedite-eos.bandcamp.com",
+    labels: "Room Trax / Mind Medizin",
+    image: "/Pics/EP/Caedite Eos Logo.jpg"
   },
 ];
 

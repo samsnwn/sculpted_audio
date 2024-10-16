@@ -10,8 +10,8 @@ import {
 
 import Image from "next/image";
 
-import Dani from "@/public/images/Human/Raw/slugos.jpg";
-import Enol from "@/public/images/Human/Portrait-3.png";
+import Dani from "@/public/Pics/slugos.jpg";
+import Enol from "@/public/Pics/P1055290-bw (1).jpg";
 import ScrollWrapper from "@/components/ScrollWrapper";
 
 type Card = {

@@ -10,22 +10,21 @@ import Logo from "@/public/logos/1-RGB/Light/SculptedAudio-Logo-Light-RGB.png";
 const Hero = () => {
   return (
     <section className="w-full min-h-screen flex items-center m-auto">
-      {/* <GridBackground className="text-neutral-700" /> */}
+      {/* <GridBackground className="text-neutral-700 -z-50" /> */}
       <SectionWrapper>
-        <div className="lg:w-2/3 flex flex-col items-center lg:items-start gap-8 md:gap-12 lg:text-left mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
-          <div className="space-y-4">
+        <div className="flex flex-col md:flex-row items-center justify-between xs:gap-8 mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
+
             <Image
-            src={Logo}
-            alt="Sculpted Audio Logo"
-            priority
-            className="w-auto h-auto"
-          />
-          </div>
-          <div className="max-w-2xl mx-auto lg:mx-0">
-            <Subheadline className="text-red text-base md:text-lg text-center lg:text-left sm:ml-16">
-              elevating sonic <br /> experiences /
-            </Subheadline>
-          </div>
+              src={Logo}
+              alt="Sculpted Audio Logo"
+              priority
+              width={300}
+              height={300}
+            />
+
+          <Subheadline className="text-red text-2xl md:text-4xl text-center lg:text-left">
+            elevating sonic <br /> experiences /
+          </Subheadline>
         </div>
       </SectionWrapper>
     </section>

@@ -11,6 +11,10 @@
   }
 }
 
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
 body::-webkit-scrollbar {
   width: 5px;
   height: 5px;

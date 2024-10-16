@@ -14,7 +14,7 @@ const Services = () => {
           <Numbers>
             [01]
           </Numbers>
-          <AltSubheadline className="xl:text-8xl font-light leading-tight">
+          <AltSubheadline className="xl:text-7xl font-light leading-tight">
             OUR<br /> SERVICES
           </AltSubheadline>
         </div>

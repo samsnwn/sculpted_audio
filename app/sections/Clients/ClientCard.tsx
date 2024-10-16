@@ -39,12 +39,28 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
           leaveFrom="opacity-100 translate-y-0"
           leaveTo="opacity-0 translate-y-full"
         >
-          <div
-            className="absolute inset-0 bg-black bg-opacity-75 p-4 pt-10 sm:pt-4 flex flex-col md:justify-center text-white"
+          {index % 2 != 0 ? (
+            <div
+              className="absolute inset-0 bg-black bg-opacity-75 p-4 pt-10 sm:pt-4 flex flex-col justify-center text-white"
+              aria-hidden={!isHovering}
+            >
+              <CardHeader className="pb-2">
+                <div className="flex justify-center items-center">
+                </div>
+              </CardHeader>
+              <CardContent className=" px-3 sm:px-4">
+                <blockquote className="text-silver text-center md:text-lg text-sm sm:text-md leading-relaxed mb-2 sm:mb-4">{client.content}</blockquote>
+                <div className="text-center">
+                  <div className="text-xs sm:text-sm opacity-70">{client.labels}</div>
+                </div>
+              </CardContent>
+            </div>
+          ) : (<div
+            className="absolute inset-0 bg-black bg-opacity-75 p-4 pt-10 sm:pt-4 flex flex-col justify-center text-white"
             aria-hidden={!isHovering}
           >
             <CardHeader className="pb-2">
-              <div className="flex justify-center">
+              <div className="flex justify-center items-center">
                 <div className="bg-red-500 bg-opacity-20 rounded-full">
                   <QuoteIcon className="h-4 w-4 sm:h-6 sm:w-6 text-red" />
                 </div>
@@ -56,10 +72,8 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
                 <div className="text-xs sm:text-sm opacity-70">{client.labels}</div>
               </div>
             </CardContent>
-            {/* <p className="text-sm text-center">
-            This content slides up when you hover over the card.
-            </p> */}
-          </div>
+          </div>)}
+
         </Transition>
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent opacity-70" />
         <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold z-10">{client.name}</h3>
