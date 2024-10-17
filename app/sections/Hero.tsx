@@ -12,7 +12,7 @@ const Hero = () => {
     <section className="w-full min-h-screen flex items-center m-auto">
       {/* <GridBackground className="text-neutral-700 -z-50" /> */}
       <SectionWrapper>
-        <div className="flex flex-col md:flex-row items-center justify-between xs:gap-8 mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-14 mt-[-160px] md:mt-[-120px] lg:mt-[-20vh]">
 
             <Image
               src={Logo}

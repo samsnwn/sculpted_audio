@@ -30,7 +30,7 @@ const AboutCard: React.FC<CardProps> = ({ card, index }) => {
       <Card className="overflow-hidden max-w-[800px] lg:max-w-[800px]">
         <Image
           src={index === 0 ? Dani : Enol}
-          alt="Card image"
+          alt={card.name}
           className="w-full h-[200px] object-cover"
         />
         <CardHeader>

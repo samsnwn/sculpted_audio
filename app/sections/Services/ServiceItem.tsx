@@ -44,7 +44,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
       <Accordion.Root type="single" collapsible>
         <Accordion.Item value="item-1">
           <Accordion.Trigger
-            className="w-full text-white flex items-center justify-between p-4 bg-gray-800 rounded-lg focus:outline-none transition-all duration-300 hover:bg-gray-700"
+            className="w-full text-white flex items-center justify-between p-4 bg-gray-800 rounded-lg transition-all duration-300 hover:bg-gray-700"
             onClick={() => setIsOpen(!isOpen)}
           >
             <div className="flex items-center">

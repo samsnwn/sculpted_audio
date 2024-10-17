@@ -1,5 +1,3 @@
-import { Mic, Headphones, Music, Users } from "lucide-react";
-
 export const faqs = [
   {
     question: "What audio formats do you accept for mastering/mixing?",

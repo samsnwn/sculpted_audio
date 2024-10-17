@@ -25,7 +25,7 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
       >
         <Image
           src={client.image}
-          alt="Card image"
+          alt={client.name}
           className="w-full h-full object-cover"
           width={1000}
           height={1000}
