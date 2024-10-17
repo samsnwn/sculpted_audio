@@ -25,7 +25,7 @@ const Hero = () => {
   const arrowOpacity = Math.max(0, 1 - scrollY / 200);
 
   return (
-    <section className="w-full min-h-screen flex m-auto relative">
+    <section className="w-full min-h-[80vh] md:min-h-[85vh] flex m-auto relative">
       {/* <GridBackground className="text-neutral-700 -z-50" /> */}
       <SectionWrapper>
         <div className="flex flex-col md:flex-row items-center justify-between gap-14 mt-[18vh] md:mt-[30vh]">
