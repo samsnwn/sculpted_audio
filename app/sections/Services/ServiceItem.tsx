@@ -22,7 +22,7 @@ type ServiceItemProps = {
 }
 
 const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, totalServices }) => {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const IconComponent = () => {
     switch (service.icon) {
