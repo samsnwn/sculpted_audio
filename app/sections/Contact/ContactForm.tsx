@@ -153,11 +153,10 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="stereo mastering"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${
-                      field.value === "stereo mastering"
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${field.value === "stereo mastering"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
-                    }`}
+                      }`}
                   >
                     Stereo Mastering
                   </label>
@@ -167,11 +166,10 @@ const ContactForm = () => {
                   <RadioGroupItem value="stem mastering" id="stem mastering" className="hidden" />
                   <label
                     htmlFor="stem mastering"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${
-                      field.value === "stem mastering"
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${field.value === "stem mastering"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
-                    }`}
+                      }`}
                   >
                     Stem Mastering
                   </label>
@@ -185,11 +183,10 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="mixing"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${
-                      field.value === "mixing"
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${field.value === "mixing"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
-                    }`}
+                      }`}
                   >
                     Mixing
                   </label>
@@ -214,9 +211,11 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="ml-2">
-          Submit
-        </Button>
+        <div className="w-full m-auto p-2">
+          <Button type="submit" className="w-full bg-black">
+            Submit
+          </Button>
+        </div>
       </form>
     </Form>
   );

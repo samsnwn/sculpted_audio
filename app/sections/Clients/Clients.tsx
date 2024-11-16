@@ -11,7 +11,7 @@ const Clients = () => {
       <SectionWrapper className="py-20">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
-        <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
+        <div className="w-[90%] flex mx-auto justify-between items-center mb-16">
           <AltSubheadline className="font-light leading-tight">
             CLIENTS
           </AltSubheadline>
