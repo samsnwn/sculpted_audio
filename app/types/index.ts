@@ -4,3 +4,10 @@ export type Client = {
   labels?: string;
   image: string;
 };
+
+export type Project = {
+  name: string;
+  content?: string;
+  link: string;
+  image: string;
+};

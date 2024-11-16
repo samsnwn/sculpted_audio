@@ -40,7 +40,7 @@ const Hero = () => {
           </Subheadline>
         </div>
         <div 
-        className="absolute left-1/2 transform -translate-x-1/2 translate-y-32 md:translate-y-80 transition-opacity duration-300 ease-in-out"
+        className="absolute left-1/2 transform -translate-x-1/2 translate-y-32 md:translate-y-60 transition-opacity duration-300 ease-in-out"
         style={{ opacity: arrowOpacity }}
       >
         <ChevronDown className="w-12 h-12 text-white animate-bounce" />

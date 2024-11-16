@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Mic, Headphones, Music, Users } from "lucide-react";
+// import { Mic, Headphones, Music, Users } from "lucide-react";
 import Body from "@/components/Texts/Body";
 import ScrollWrapper from "@/components/ScrollWrapper";
 import * as Accordion from '@radix-ui/react-accordion';
@@ -24,20 +24,20 @@ type ServiceItemProps = {
 const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, totalServices }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const IconComponent = () => {
-    switch (service.icon) {
-      case "Mic":
-        return <Mic className="h-6 w-6 text-red" />;
-      case "Music":
-        return <Music className="h-6 w-6 text-red" />;
-      case "Headphones":
-        return <Headphones className="h-6 w-6 text-red" />;
-      case "Users":
-        return <Users className="h-6 w-6 text-red" />;
-      default:
-        return null;
-    }
-  };
+  // const IconComponent = () => {
+  //   switch (service.icon) {
+  //     case "Mic":
+  //       return <Mic className="h-6 w-6 text-red" />;
+  //     case "Music":
+  //       return <Music className="h-6 w-6 text-red" />;
+  //     case "Headphones":
+  //       return <Headphones className="h-6 w-6 text-red" />;
+  //     case "Users":
+  //       return <Users className="h-6 w-6 text-red" />;
+  //     default:
+  //       return null;
+  //   }
+  // };
 
   return (
     <ScrollWrapper index={index}>
@@ -48,7 +48,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, total
             onClick={() => setIsOpen(!isOpen)}
           >
             <div className="flex items-center">
-              <IconComponent />
+              {/* <IconComponent /> */}
               <h3 className="text-xl ml-3 font-thin">{service.title}</h3>
             </div>
             <motion.div

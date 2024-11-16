@@ -102,23 +102,11 @@ export const clients = [
     image: "/Pics/01 Kwartz.jpg"
   },
   {
-    name: "POLE075",
-    content:
-    "“Mixed by Dani Tébar”. https://polegroup.bandcamp.com/music",
-    image: "/Pics/EP/POLE075_FRONT.jpg"
-  },
-  {
     name: "Blanka",
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
     labels: "SK_eleven / Room Trax",
     image: "/Pics/02 BLANKA.jpg"
-  },
-  {
-    name: "ROOM Trax",
-    content:
-      "“Mastering by Dani Tébar from ROOM038 onwards” https://roomtrax.bandcamp.com/music",
-    image: "/Pics/EP/ROOM Trax Logo.jpg"
   },
   {
     name: "Nöle",
@@ -128,25 +116,42 @@ export const clients = [
     image: "/Pics/03 Nole.jpg"
   },
   {
-    name: "Dronegone - Lilith",
-    content:
-      "“Sculpted Audio needed just one mix version to make it work and make us happy. The Master was clean and very accurate respecting the mix. Enol Balado is someone that you can definitely trust a kick drum.” https://dronegone.bandcamp.com/album/lilith. Mixed by Enol Balado - Mastered by Dani Tébar ",
-    labels: "Barro / Bizarro",
-    image: "/Pics/EP/DRONEGONE.jpg"
-
-  },
-  {
     name: "Angioma",
     content:
       "“I needed to take a step forward in my mixes, and I achieved it thanks to Sculpted Audio. Full support.”",
     labels: "Room Trax / Mind Medizin",
     image: "/Pics/04 Angioma.jpg"
   },
+];
+
+export const projects = [
+  {
+    name: "POLE075",
+    content:
+    "Mixed by Dani Tébar",
+    link: "https://polegroup.bandcamp.com/music",
+    image: "/Pics/EP/POLE075_FRONT.jpg"
+  },
+  {
+    name: "ROOM Trax",
+    content:
+      "Mastering by Dani Tébar from ROOM038 onwards",
+    link: "https://roomtrax.bandcamp.com/music",
+    image: "/Pics/EP/ROOM Trax Logo.jpg"
+  },
+  {
+    name: "Dronegone - Lilith",
+    content:
+      "“They needed just one mix version to make it work and make us happy. The Master was clean and very accurate respecting the mix. Enol Balado is someone that you can definitely trust a kick drum.” Mixed by Enol Balado - Mastered by Dani Tébar ",
+    link: "https://dronegone.bandcamp.com/album/lilith",
+    image: "/Pics/EP/DRONEGONE.jpg"
+
+  },
   {
     name: "Caedite Eos",
     content:
-    "“Mastered by Dani Tébar except CAEDITEOS001 and 002” https://caedite-eos.bandcamp.com",
-    labels: "Room Trax / Mind Medizin",
+    "Mastered by Dani Tébar except CAEDITEOS001 and 002",
+    link: " https://caedite-eos.bandcamp.com",
     image: "/Pics/EP/Caedite Eos Logo.jpg"
   },
 ];

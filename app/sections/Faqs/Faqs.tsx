@@ -15,12 +15,12 @@ const Faqs = () => {
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
         <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
+          <Numbers>
+            [05]
+          </Numbers>
           <AltSubheadline className="font-light leading-tight">
             FAQs
           </AltSubheadline>
-          <Numbers>
-            [04]
-          </Numbers>
         </div>
         {/* <AltSubheadline className="text-white-100 text-4xl md:text-5xl lg:text-6xl ml-5 md:items-start mb-16 font-light">FAQs
         </AltSubheadline> */}

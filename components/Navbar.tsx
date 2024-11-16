@@ -17,6 +17,10 @@ const links = [
     slug: "#clients",
   },
   {
+    title: "Projects",
+    slug: "#projects",
+  },
+  {
     title: "About",
     slug: "#about",
   },
@@ -46,7 +50,7 @@ const Navbar = () => {
     <nav
       className={cn("flex items-center font-light", gtPressuraMono.className)}
     >
-      <ul className="hidden md:flex gap-14 justify-between items-center h-full md:pr-3">
+      <ul className="hidden md:flex gap-8 justify-between items-center h-full md:pr-3">
         {links.map((link, index) => (
           <Link href={link.slug} key={index}>
             <li className="border-b border-transparent hover:border-red transition duration-300">
