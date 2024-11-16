@@ -106,7 +106,7 @@ export const clients = [
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
     labels: "SK_eleven / Room Trax",
-    image: "/Pics/03 Nole.jpg"
+    image: "/Pics/02 BLANKA.jpg"
   },
   {
     name: "Nöle",
