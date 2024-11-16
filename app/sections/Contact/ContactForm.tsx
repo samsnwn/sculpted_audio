@@ -143,9 +143,9 @@ const ContactForm = () => {
               <RadioGroup
                 value={field.value}
                 onValueChange={field.onChange}
-                className="flex space-x-2 items-center w-full"
+                className="flex flex-col xs:flex-row items-center justify-center md:justify-start w-full"
               >
-                <div className="flex items-center pl-2">
+                <div className="flex items-center">
                   <RadioGroupItem
                     value="stereo mastering"
                     id="stereo mastering"
@@ -153,7 +153,7 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="stereo mastering"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${
                       field.value === "stereo mastering"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
@@ -167,7 +167,7 @@ const ContactForm = () => {
                   <RadioGroupItem value="stem mastering" id="stem mastering" className="hidden" />
                   <label
                     htmlFor="stem mastering"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${
                       field.value === "stem mastering"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
@@ -185,7 +185,7 @@ const ContactForm = () => {
                   />
                   <label
                     htmlFor="mixing"
-                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm ${
+                    className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${
                       field.value === "mixing"
                         ? "bg-black text-white"
                         : "bg-gray-200 border-gray-300 text-gray-700"
