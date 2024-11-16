@@ -106,7 +106,7 @@ export const clients = [
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
     labels: "SK_eleven / Room Trax",
-    image: "/Pics/02 BLANKA.jpg"
+    image: "/Pics/03 Nole.jpg"
   },
   {
     name: "Nöle",
@@ -115,21 +115,14 @@ export const clients = [
     labels: "Barro / Bizarro",
     image: "/Pics/03 Nole.jpg"
   },
-  {
-    name: "Angioma",
-    content:
-      "“I needed to take a step forward in my mixes, and I achieved it thanks to Sculpted Audio. Full support.”",
-    labels: "Room Trax / Mind Medizin",
-    image: "/Pics/04 Angioma.jpg"
-  },
 ];
 
 export const projects = [
   {
-    name: "POLE075",
+    name: "Kwartz - Under Control EP. PoleGroup075",
     content:
     "Mixed by Dani Tébar",
-    link: "https://polegroup.bandcamp.com/music",
+    link: "https://polegroup.bandcamp.com/album/under-control-ep-polegroup075",
     image: "/Pics/EP/POLE075_FRONT.jpg"
   },
   {
