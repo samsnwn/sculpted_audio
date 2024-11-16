@@ -7,7 +7,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 const Projects = () => {
   return (
-    <section className="w-full" id="clients">
+    <section className="w-full" id="projects">
       <SectionWrapper className="py-20">
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
