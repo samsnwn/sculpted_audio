@@ -9,25 +9,10 @@ const Clients = () => {
   return (
     <section className="w-full" id="work">
       <SectionWrapper className="py-20">
-        <div className="w-5 h-0.5 bg-red border border-red" />
-        <div className="w-0.5 bg-red h-4 border border-red" />
-        <div className="w-[90%] flex mx-auto justify-between items-center mb-16">
-          <AltSubheadline className="font-light leading-tight">
-            OUR WORK
-          </AltSubheadline>
-          <Numbers>
-            [02]
-          </Numbers>
-        </div>
         <div className="grid grid-cols-1 gap-4 w-full mx-auto md:grid-cols-2 lg:grid-cols-3">
           {clients.map((client, index) => (
             <div
               key={index}
-              className={cn(
-                index === 2 && clients.length === 4 ? "sm:col-span-1 lg:col-span-1" :
-                index === 2 && "sm:col-span-2 lg:col-span-1",
-                index > 2 && "sm:col-span-1"
-              )}
             >
               <ClientCard client={client} index={index} />
             </div>

@@ -51,15 +51,15 @@ const ClientCard: React.FC<ClientProps> = ({ client, index }) => {
               </div>
             </CardHeader>
             <CardContent className=" px-3 sm:px-4">
-              <blockquote className="text-silver text-center md:text-lg text-sm sm:text-md leading-relaxed mb-2 sm:mb-4">{client.content}</blockquote>
+              <blockquote className="text-silver text-center md:text-lg text-sm sm:text-base leading-relaxed mb-2 sm:mb-4">{client.content}</blockquote>
               <div className="text-center">
-                <div className="text-xs sm:text-sm opacity-70">{client.labels}</div>
+                <div className="text-sm sm:text-base opacity-70">{client.labels}</div>
               </div>
             </CardContent>
           </div>
         </Transition>
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent opacity-70" />
-        <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold z-10">{client.name}</h3>
+        <h3 className="absolute bottom-4 left-4 text-white text-2xl font-bold z-10">{client.name}</h3>
       </Card>
     </ScrollWrapper>
   )

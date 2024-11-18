@@ -68,7 +68,7 @@ const ContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-1 uppercase sm:px-2 lg:px-4"
+        className="space-y-1 uppercase px-2 lg:px-4"
       >
         <FormField
           control={form.control}
@@ -126,7 +126,7 @@ const ContactForm = () => {
               <RadioGroup
                 value={field.value}
                 onValueChange={field.onChange}
-                className="flex flex-col xs:flex-row items-center justify-center md:justify-start w-full"
+                className="flex xs:flex-row items-center justify-center md:justify-start w-full"
               >
                 <div className="flex items-center">
                   <RadioGroupItem

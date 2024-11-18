@@ -35,7 +35,7 @@ const Hero = () => {
             width={400}
             height={400}
           />
-          <Subheadline className="text-red text-2xl md:text-5xl text-left">
+          <Subheadline className="text-red text-2xl md:text-5xl text-left mt-20 md:mt-0">
             elevating sonic <br /> experiences/
           </Subheadline>
         </div>

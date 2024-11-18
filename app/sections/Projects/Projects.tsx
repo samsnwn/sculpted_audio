@@ -9,25 +9,21 @@ const Projects = () => {
   return (
     <section className="w-full" id="projects">
       <SectionWrapper className="py-20">
-        {/* <div className="w-5 h-0.5 bg-red border border-red" />
+      <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
-        <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
-          <Numbers>
-            [03]
-          </Numbers>
+        <div className="w-[90%] flex mx-auto justify-between items-center mb-16">
           <AltSubheadline className="font-light leading-tight">
-            PROJECTS
+            OUR WORK
           </AltSubheadline>
-        </div> */}
-        <div className="flex flex-col md:flex-row w-full mx-auto">
+          <Numbers>
+            [02]
+          </Numbers>
+        </div>
+        <div className="flex flex-col md:flex-row w-full mx-auto gap-4">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={cn(
-                index === 2 && projects.length === 4 ? "sm:col-span-1 lg:col-span-1" :
-                index === 2 && "sm:col-span-2 lg:col-span-1",
-                index > 2 && "sm:col-span-1"
-              )}
+              className=""
             >
               <ProjectCard project={project} index={index} />
             </div>

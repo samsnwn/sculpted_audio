@@ -50,9 +50,9 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
               </div>
             </CardHeader>
             <CardContent className=" px-3 sm:px-4">
-              <blockquote className="text-silver text-center md:text-md text-sm xs:text-xs sm:text-md leading-relaxed mb-2 sm:mb-4">{project.content}</blockquote>
+              <blockquote className="text-silver text-center md:text-base text-sm xs:text-xs sm:text-base leading-relaxed mb-2 sm:mb-4">{project.content}</blockquote>
               <div className="text-center">
-                <Link className="text-xs sm:text-sm opacity-70" href={project.link} target="_blank">{project.link}</Link>
+                <Link className="text-sm sm:text-base opacity-70" href={project.link} target="_blank">{project.link}</Link>
               </div>
             </CardContent>
           </div>
