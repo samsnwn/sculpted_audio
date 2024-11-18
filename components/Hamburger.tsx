@@ -14,6 +14,8 @@ const HamburgerMenu = ({
   return (
     <div className="relative pr-1">
       <button
+        aria-label="Hamburger"
+        role="button"
         onClick={toggleMenu}
         className="flex flex-col h-6 w-8 justify-between items-center group"
       >
