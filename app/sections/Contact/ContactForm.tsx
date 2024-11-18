@@ -207,7 +207,7 @@ const ContactForm = () => {
           <div
             className={`p-4 text-sm rounded-md ${status.success
                 ? 'bg-green-50 text-green-700'
-                : 'bg-red-50 text-red-700'
+                : 'bg-red-50 text-red'
               }`}
           >
             {status.message}

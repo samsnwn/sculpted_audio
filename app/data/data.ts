@@ -134,8 +134,9 @@ export const projects = [
   },
   {
     name: "Dronegone - Lilith",
-    content:
-      "“They needed just one mix version to make it work and make us happy. The Master was clean and very accurate respecting the mix. Enol Balado is someone that you can definitely trust a kick drum.” Mixed by Enol Balado - Mastered by Dani Tébar ",
+    content2:
+      "“They needed just one mix version to make it work and make us happy. The Master was clean and very accurate respecting the mix. Enol Balado is someone that you can definitely trust a kick drum.”",
+    content: "Mixed by Enol Balado - Mastered by Dani Tébar",
     link: "https://dronegone.bandcamp.com/album/lilith",
     image: "/Pics/EP/DRONEGONE.jpg"
 
