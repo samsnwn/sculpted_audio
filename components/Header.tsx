@@ -23,6 +23,7 @@ const Header = () => {
 
   return (
     <header
+      role="banner"
       className={`sticky top-0 transition-all duration-300 rounded-md text-white p-2 md:p-3 lg:p-4 z-50  ${isScrolled ? "bg-gray/80 backdrop-blur-sm shadow-2xl" : "bg-transparent"
         }`}
     // className="sticky top-0 transition-background duration-300 rounded-md text-white p-2 md:p-3 lg:p-4 z-50 bg-black/90 backdrop-blur-sm shadow-2xl"

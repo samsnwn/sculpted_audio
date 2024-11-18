@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col items-center gap-5 justify-center w-full p-10">
+    <footer className="flex flex-col items-center gap-5 justify-center w-full p-10" role="info">
       <Image src={Icon} alt="icon" width={75} height={75}/>
       <p className="text-white"> Sculpted Audio© {currentYear}. All rights reserved.</p>
     </footer>
