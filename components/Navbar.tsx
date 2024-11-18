@@ -13,12 +13,8 @@ const links = [
     slug: "#services",
   },
   {
-    title: "Clients",
-    slug: "#clients",
-  },
-  {
-    title: "Projects",
-    slug: "#projects",
+    title: "Our Work",
+    slug: "#work",
   },
   {
     title: "About",

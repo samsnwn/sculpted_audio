@@ -2,8 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
-import emailjs from "emailjs-com";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,28 +17,15 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import CountryPhoneInput from "./CountryPhoneInput";
 
-const formSchema = z.object({
-  name: z
-    .string()
-    .min(1, "Name is required")
-    .max(25, "Name can't exceed 25 characters"),
-  email: z
-    .string()
-    .min(1, "Email is required")
-    .max(50, "Exceeded maximum length")
-    .email("Invalid email address"),
-  phone: z.object({
-    countryCode: z.string().max(5, "Exceeded maximum length"),
-    number: z.string().max(15, "Exceeded maximum length"),
-  }),
-  services: z.enum(["stereo mastering", "stem mastering", "mixing"], {
-    invalid_type_error: "Invalid service selected",
-  }),
-  message: z.string().min(1, "Message is required").max(1500, "Exceeded maximum length"),
-});
+import { sendEmail } from '@/app/actions/sendEmail';
+import { useState } from 'react';
+import { formSchema, FormData } from "@/app/lib/schema";
 
 const ContactForm = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const [status, setStatus] = useState<{ message: string; success?: boolean } | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -54,31 +39,29 @@ const ContactForm = () => {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    // try {
-    //   const result = await emailjs.send(
-    //     'service_5wd7vmg',
-    //     'template_507vavf',
-    //     {
-    //       from_name: values.name,
-    //       from_email: values.email,
-    //       countryCode: values.phone.countryCode,
-    //       number: values.phone.number,
-    //       services: values.services,
-    //       message: values.message,
-    //     },
-    //     'qSKRPDQhJ7EsR6rtf'
-    //   );
+  async function onSubmit(values: FormData) {
+    try {
+      setIsSubmitting(true);
+      setStatus(null);
 
-    //   if (result.status === 200) {
-    //     alert('Your message has been sent successfully!');
-    //     form.reset();
-    //   }
-    // } catch (error) {
-    //   alert('Failed to send your message. Please try again later.');
-    //   console.error('EmailJS Error:', error);
-    // }
-    console.log(values);
+      const result = await sendEmail(values);
+
+      setStatus({
+        message: result.message,
+        success: result.success
+      });
+
+      if (result.success) {
+        form.reset();
+      }
+    } catch (error) {
+      setStatus({
+        message: 'An unexpected error occurred. Please try again.',
+        success: false
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -154,8 +137,8 @@ const ContactForm = () => {
                   <label
                     htmlFor="stereo mastering"
                     className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${field.value === "stereo mastering"
-                        ? "bg-black text-white"
-                        : "bg-gray-200 border-gray-300 text-gray-700"
+                      ? "bg-black text-white"
+                      : "bg-gray-200 border-gray-300 text-gray-700"
                       }`}
                   >
                     Stereo Mastering
@@ -167,8 +150,8 @@ const ContactForm = () => {
                   <label
                     htmlFor="stem mastering"
                     className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${field.value === "stem mastering"
-                        ? "bg-black text-white"
-                        : "bg-gray-200 border-gray-300 text-gray-700"
+                      ? "bg-black text-white"
+                      : "bg-gray-200 border-gray-300 text-gray-700"
                       }`}
                   >
                     Stem Mastering
@@ -184,8 +167,8 @@ const ContactForm = () => {
                   <label
                     htmlFor="mixing"
                     className={`cursor-pointer px-4 py-2 border transition-colors duration-300 text-sm w-full sm:w-40 text-center ${field.value === "mixing"
-                        ? "bg-black text-white"
-                        : "bg-gray-200 border-gray-300 text-gray-700"
+                      ? "bg-black text-white"
+                      : "bg-gray-200 border-gray-300 text-gray-700"
                       }`}
                   >
                     Mixing
@@ -212,10 +195,24 @@ const ContactForm = () => {
           )}
         />
         <div className="w-full m-auto p-2">
-          <Button type="submit" className="w-full bg-black">
-            Submit
+          <Button
+            type="submit"
+            className="w-full bg-black"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Sending...' : 'Submit'}
           </Button>
         </div>
+        {status && (
+          <div
+            className={`p-4 text-sm rounded-md ${status.success
+                ? 'bg-green-50 text-green-700'
+                : 'bg-red-50 text-red-700'
+              }`}
+          >
+            {status.message}
+          </div>
+        )}
       </form>
     </Form>
   );

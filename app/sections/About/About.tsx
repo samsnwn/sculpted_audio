@@ -14,12 +14,12 @@ const About = () => {
         <div className="w-5 h-0.5 bg-red border border-red" />
         <div className="w-0.5 bg-red h-4 border border-red" />
         <div className="w-[90%] flex mx-auto justify-between md:items-center mb-16">
+          <Numbers>
+            [03]
+          </Numbers>
           <AltSubheadline className="font-light leading-tight">
             ABOUT US
           </AltSubheadline>
-          <Numbers>
-            [04]
-          </Numbers>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-5">
           {cards.map((card, index) => (

@@ -44,6 +44,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
             className="absolute inset-0 bg-black bg-opacity-75 sm:pt-4 flex flex-col justify-center text-white"
             aria-hidden={!isHovering}
           >
+            <CardHeader className="pb-2">
+              <div className="flex justify-center items-center">
+                {project.name}
+              </div>
+            </CardHeader>
             <CardContent className=" px-3 sm:px-4">
               <blockquote className="text-silver text-center md:text-md text-sm xs:text-xs sm:text-md leading-relaxed mb-2 sm:mb-4">{project.content}</blockquote>
               <div className="text-center">
@@ -53,7 +58,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
           </div>
         </Transition>
         <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent opacity-70" />
-        <h3 className="absolute bottom-4 left-4 text-white text-xl font-bold z-10">{project.name}</h3>
+
       </Card>
     </ScrollWrapper>
   )

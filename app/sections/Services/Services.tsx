@@ -20,10 +20,10 @@ const Services = () => {
             OUR<br /> SERVICES
           </AltSubheadline>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-8">
           {services.map((service, index) => (
             <div key={index} className={cn(
-              "w-full",
+              "w-full ",
               index === services.length - 1 && services.length % 2 !== 0 && "md:col-span-2"
             )}>
               <ServiceItem
