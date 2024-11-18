@@ -53,7 +53,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
               <blockquote className="text-silver text-center md:text-base text-xs sm:text-sm leading-relaxed mb-2 sm:mb-4">{project.content2}</blockquote>
               <blockquote className="text-silver text-center md:text-lg text-sm sm:text-base leading-relaxed mb-2 sm:mb-4">{project.content}</blockquote>
               <div className="text-center mt-4">
-                <Link className="text-base opacity-70 " href={project.link} target="_blank">{project.link}</Link>
+                <Link className="text-base opacity-70 text-center" href={project.link} target="_blank">{project.link}</Link>
               </div>
             </CardContent>
           </div>

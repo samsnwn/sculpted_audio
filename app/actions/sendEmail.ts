@@ -31,7 +31,7 @@ export async function sendEmail(data: FormData) {
     };
 
     await transporter.sendMail(mailOptions);
-    return { success: true, message: 'Your message has been sent successfully!' };
+    return { success: true, message: 'Your message has been sent successfully! We will get back to you as soon as possible. Thank you!' };
   } catch (error) {
     console.error('Error sending email:', error);
     return { success: false, message: 'Failed to send message. Please try again.' };
