@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { cn } from "@/utils/cn";
 import { gtPressura } from "./styles/fonts";
 import Footer from "@/app/sections/Footer";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Sculpted Audio",
