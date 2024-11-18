@@ -37,7 +37,7 @@ export default function RootLayout({
         id="home"
       >
         <Header />
-        <main className="flex flex-col overflow-hidden">{children}</main>
+        <main className="flex flex-col overflow-hidden">{children}<Analytics /></main>
         <Footer />
       </body>
     </html>
