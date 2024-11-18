@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Sculpted Audio",
-  description: "Sculpted Audio",
+  description: "Sculpted Audio are based in Berlin",
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" }, // Fallback .ico file
