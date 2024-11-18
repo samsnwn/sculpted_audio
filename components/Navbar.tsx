@@ -48,11 +48,11 @@ const Navbar = () => {
     >
       <ul className="hidden md:flex gap-8 justify-between items-center h-full md:pr-3">
         {links.map((link, index) => (
-          <Link href={link.slug} key={index}>
-            <li className="border-b border-transparent hover:border-red transition duration-300">
+          <li className="border-b border-transparent hover:border-red transition duration-300">
+            <Link href={link.slug} key={index}>
               {link.title}
-            </li>
-          </Link>
+            </Link>
+          </li>
         ))}
       </ul>
 
@@ -63,9 +63,8 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <div
-        className={`flex flex-col fixed h-screen ease-in-out duration-500 top-0 w-[85%] items-center justify-center gap-32 pb-24 text-center rounded-md shadow ${
-          menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
-        }`}
+        className={`flex flex-col fixed h-screen ease-in-out duration-500 top-0 w-[85%] items-center justify-center gap-32 pb-24 text-center rounded-md shadow ${menuOpen ? "left-0 bg-black-100" : "left-[-100%]"
+          }`}
       >
         <div onClick={handleClose}>
           <Link href="#home">
@@ -80,14 +79,14 @@ const Navbar = () => {
         </div>
         <ul className="flex flex-col items-center w-full gap-5 text-white text-lg font-light">
           {links.map((link, index) => (
-            <Link href={link.slug} key={index}>
-              <li
-                className="border-b border-transparent hover:border-red transition duration-300"
-                onClick={handleClose}
-              >
+            <li
+              className="border-b border-transparent hover:border-red transition duration-300"
+              onClick={handleClose}
+            >
+              <Link href={link.slug} key={index}>
                 {link.title}
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
         <div className="flex flex-col items-center gap-5 px-6">
