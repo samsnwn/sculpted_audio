@@ -1,8 +1,5 @@
 import { clients } from "@/app/data/data";
 import ClientCard from "./ClientCard";
-import { cn } from "@/utils/cn";
-import AltSubheadline from "@/components/Texts/AltSubheadline";
-import Numbers from "@/components/Texts/Numbers";
 import SectionWrapper from "@/components/SectionWrapper";
 
 const Clients = () => {

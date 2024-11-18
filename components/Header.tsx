@@ -3,7 +3,6 @@
 import Navbar from "./Navbar";
 import Link from "next/link";
 import Image from "next/image";
-import Icon from "../public/icons/1-RGB/Light/SculptedAudio-Icon-Light-RGB.png";
 import Logo from "../public/logos/1-RGB/Light/SculptedAudio-Logo-Light-RGB.png";
 
 import { useState, useEffect } from "react";
