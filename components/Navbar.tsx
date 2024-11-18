@@ -48,8 +48,8 @@ const Navbar = () => {
     >
       <ul className="hidden md:flex gap-8 justify-between items-center h-full md:pr-3">
         {links.map((link, index) => (
-          <li className="border-b border-transparent hover:border-red transition duration-300">
-            <Link href={link.slug} key={index}>
+          <li key={index} className="border-b border-transparent hover:border-red transition duration-300">
+            <Link href={link.slug} >
               {link.title}
             </Link>
           </li>
@@ -80,10 +80,11 @@ const Navbar = () => {
         <ul className="flex flex-col items-center w-full gap-5 text-white text-lg font-light">
           {links.map((link, index) => (
             <li
+            key={index}
               className="border-b border-transparent hover:border-red transition duration-300"
               onClick={handleClose}
             >
-              <Link href={link.slug} key={index}>
+              <Link href={link.slug}>
                 {link.title}
               </Link>
             </li>
