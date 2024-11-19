@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
   return (
     <ScrollWrapper index={index}>
       <Card
-        className="relative overflow-hidden cursor-pointer group mx-auto max-w-[75%] sm:max-w-[60%] md:max-w-[85%] lg:max-w-[90%] lg:max-h-[425px] xl:max-h-[400px]"
+        className="relative overflow-hidden cursor-pointer group mx-auto max-w-[75%] md:max-w-[85%] lg:max-w-[90%] lg:max-h-[425px] xl:max-h-[400px]"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
