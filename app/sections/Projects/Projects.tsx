@@ -19,13 +19,11 @@ const Projects = () => {
             [02]
           </Numbers>
         </div>
-        <div className="w-full mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-4">
             {projects.map((project, index) => (
                 <ProjectCard project={project} index={index} key={index}/>
             ))}
           </div>
-        </div>
       </SectionWrapper>
     </section>
   );

@@ -102,7 +102,7 @@ export const clients = [
     image: "/Pics/01 Kwartz.jpg"
   },
   {
-    name: "Blanka",
+    name: "BLANKA",
     content:
       "“My experience working with Sculpted Audio has always been of high quality, both professionally and personally. They make you squeeze your work and get the best results out of yourself!”",
     labels: "SK_eleven / Room Trax",
@@ -124,6 +124,13 @@ export const projects = [
     "Mixed by Dani Tébar",
     link: "https://polegroup.bandcamp.com/album/under-control-ep-polegroup075",
     image: "/Pics/EP/POLE075_FRONT.jpg"
+  },
+  {
+    name: "BLANKA - Breaking Rules EP. SKX028",
+    content:
+    "Additional mix by Dani Tébar",
+    link: "https://skeleven.bandcamp.com/album/breaking-rules",
+    image: "/Pics/EP/0037636223_10.jpg"
   },
   {
     name: "ROOM Trax",

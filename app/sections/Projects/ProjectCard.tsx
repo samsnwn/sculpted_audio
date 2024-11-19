@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import Image from 'next/image';
-import { QuoteIcon } from 'lucide-react';
 import ScrollWrapper from '@/components/ScrollWrapper';
 import { Project } from '@/app/types';
 import Link from 'next/link';
@@ -20,16 +19,16 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
   return (
     <ScrollWrapper index={index}>
       <Card
-        className="relative overflow-hidden cursor-pointer group mx-auto aspect-square max-w-sm md:w-[95%] lg:h-full"
+        className="relative overflow-hidden cursor-pointer group mx-auto max-w-[75%] sm:max-w-[60%] md:max-w-[85%] lg:max-w-[90%] lg:max-h-[425px] xl:max-h-[400px]"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
         <Image
           src={project.image}
           alt={project.name}
-          className="w-full h-full object-cover"
           width={1000}
           height={1000}
+          className='w-full h-full object-fill'
         />
         <Transition
           show={isHovering}
@@ -58,7 +57,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project, index }) => {
             </CardContent>
           </div>
         </Transition>
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent opacity-70" />
+        {/* <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent opacity-70" /> */}
       </Card>
     </ScrollWrapper>
   )
