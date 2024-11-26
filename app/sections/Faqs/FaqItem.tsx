@@ -8,14 +8,11 @@ import {
 
 import React from "react";
 import ScrollWrapper from "@/components/ScrollWrapper";
-
-type Faq = {
-  question: string;
-  answer: string;
-}
+import { Faq } from "@/app/types";
 
 type FaqProps = {
-  faq: Faq;
+  faq: Faq
+  ;
   index: number;
 }
 

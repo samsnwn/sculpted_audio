@@ -13,14 +13,10 @@ import Image from "next/image";
 import Dani from "@/public/Pics/slugos.jpg";
 import Enol from "@/public/Pics/P1055290-bw (1).jpg";
 import ScrollWrapper from "@/components/ScrollWrapper";
-
-type Card = {
-  name: string;
-  content: string;
-};
+import { AboutCardProps } from "@/app/types";
 
 type CardProps = {
-  card: Card;
+  card: AboutCardProps;
   index: number;
 };
 

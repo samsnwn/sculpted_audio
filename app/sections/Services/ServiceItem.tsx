@@ -1,27 +1,19 @@
 "use client";
 
 import * as React from "react";
-// import { Mic, Headphones, Music, Users } from "lucide-react";
 import Body from "@/components/Texts/Body";
 import ScrollWrapper from "@/components/ScrollWrapper";
 import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-type Service = {
-  title: string
-  description: string
-  icon: React.ReactNode
-}
+import { Service } from "@/app/types";
 
 type ServiceItemProps = {
   service: Service
   index: number
-  isLast: boolean
-  totalServices: number
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ service, index, isLast, totalServices }) => {
+const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   // const IconComponent = () => {

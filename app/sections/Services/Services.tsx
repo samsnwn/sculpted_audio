@@ -29,8 +29,6 @@ const Services = () => {
               <ServiceItem
                 index={index}
                 service={service}
-                isLast={index === services.length - 1}
-                totalServices={services.length}
               />
             </div>
           ))}
