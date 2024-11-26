@@ -5,6 +5,7 @@ import { cn } from "@/utils/cn";
 import { gtPressura } from "./styles/fonts";
 import Footer from "@/app/sections/Footer";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Sculpted Audio",
@@ -37,7 +38,7 @@ export default function RootLayout({
         id="home"
       >
         <Header />
-        <main className="flex flex-col overflow-hidden" role="main">{children}<Analytics /></main>
+        <main className="flex flex-col overflow-hidden" role="main">{children}<Analytics /><SpeedInsights /></main>
         <Footer />
       </body>
     </html>
