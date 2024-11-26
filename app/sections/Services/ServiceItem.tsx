@@ -36,7 +36,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
       <Accordion.Root type="single" collapsible>
         <Accordion.Item value="item-1">
           <Accordion.Trigger
-            className="w-full text-white flex items-center justify-between p-4 bg-gray-800 rounded-lg transition-all duration-300 hover:bg-gray-700"
+            className="w-full text-white flex items-center justify-between p-4 bg-gray/80 rounded-lg transition-all duration-300 hover:bg-gray/70"
             onClick={() => setIsOpen(!isOpen)}
           >
             <div className="flex items-center">
@@ -60,7 +60,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
                   transition={{ duration: 0.3, delay: 0.1 }}
                   className="overflow-hidden"
                 >
-                  <div className="p-4 bg-gray-700 rounded-lg mt-2">
+                  <div className="p-4 bg-gray/70 rounded-lg mt-2">
                     <Body className="text-gray-300 text-base">{service.description}</Body>
                   </div>
                 </motion.div>
